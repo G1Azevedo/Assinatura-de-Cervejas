@@ -7,8 +7,16 @@
 //             Desenvolvido por @G1Azevedo -- since Mar, 2023              //
 /////////////////////////////////////////////////////////////////////////////
 
+#include <stdlib.h>
 #include <stdio.h>
 
+//Assinatura de funções
+void tela_bemvindo(void);
+void tela_principal(void);
+void tela_sobre(void);
+void tela_equipe(void);
+
+//Main
 int main(void) {
     printf("Início do projeto\n");
     return (0);
