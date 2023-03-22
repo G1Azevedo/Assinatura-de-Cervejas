@@ -16,16 +16,20 @@ void tela_menu(void);
 void tela_sobre(void);
 void tela_equipe(void);
 void tela_assinatura(void);
-void tela_sobre(void);
 void tela_cadastro(void);
+void tela_status_assinatura(void);
+void tela_sobre(void);
+
 
 //Main
 int main(void) {
     tela_bemvindo();
     tela_menu();
     tela_assinatura();
-    tela_sobre();
     tela_cadastro();
+    tela_status_assinatura();
+    tela_sobre();
+    
     return (0);
 }
 
@@ -135,6 +139,28 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///            Cidade:                                                      ///\n");
     printf("///            Endereço (bairro, rua e nº):                                 ///\n");
     printf("///            Complemento (opcional):                                      ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
+void tela_status_assinatura(void) {
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                      > Status da Assinatura <                           ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            CPF (apenas números):                                        ///\n");
+    printf("///            Nome completo:                                               ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
