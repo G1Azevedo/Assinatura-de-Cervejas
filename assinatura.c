@@ -18,6 +18,7 @@ void tela_equipe(void);
 void tela_assinatura(void);
 void tela_cadastro(void);
 void tela_status_assinatura(void);
+void tela_cancelar_assinatura(void);
 void tela_sobre(void);
 
 
@@ -28,6 +29,7 @@ int main(void) {
     tela_assinatura();
     tela_cadastro();
     tela_status_assinatura();
+    tela_cancelar_assinatura();
     tela_sobre();
     
     return (0);
@@ -159,6 +161,28 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///            CPF (apenas números):                                        ///\n");
     printf("///            Nome completo:                                               ///\n");
     printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
+void tela_cancelar_assinatura(void) {
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                      > Cancelar Assinatura <                            ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Digite seu CPF:                                              ///\n");
+    printf("///            Data de nascimento (dd/mm/aaaa):                             ///\n");
+    printf("///            Motivo do cancelamento:                                      ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
