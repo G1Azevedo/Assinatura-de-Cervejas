@@ -17,6 +17,7 @@ void tela_sobre(void);
 void tela_equipe(void);
 void tela_assinatura(void);
 void tela_sobre(void);
+void tela_cadastro(void);
 
 //Main
 int main(void) {
@@ -24,6 +25,7 @@ int main(void) {
     tela_menu();
     tela_assinatura();
     tela_sobre();
+    tela_cadastro();
     return (0);
 }
 
@@ -114,6 +116,31 @@ void tela_assinatura(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+}
+
+void tela_cadastro(void) {
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                         > Cadastro <                                    ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            CPF (apenas números):                                        ///\n");
+    printf("///            Nome completo:                                               ///\n");
+    printf("///            E-mail:                                                      ///\n");
+    printf("///            Data de Nascimento (dd/mm/aaaa):                             ///\n");
+    printf("///            Celular  (apenas números):                                   ///\n");
+    printf("///            Cidade:                                                      ///\n");
+    printf("///            Endereço (bairro, rua e nº):                                 ///\n");
+    printf("///            Complemento (opcional):                                      ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
 }
 
 void tela_sobre(void) {
