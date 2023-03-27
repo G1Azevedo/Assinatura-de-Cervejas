@@ -23,7 +23,7 @@ void tela_sobre(void);
 void tela_equipe(void);
 
 
-//Main
+///Main
 int main(void) {
     tela_bem_vindo();
     tela_menu();
