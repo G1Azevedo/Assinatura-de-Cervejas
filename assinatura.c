@@ -13,13 +13,13 @@
 //Assinatura de funções
 void tela_bem_vindo(void);
 void tela_menu(void);
-void tela_sobre(void);
-void tela_equipe(void);
 void tela_assinatura(void);
-void tela_edicao_cadastro(void);
 void tela_cadastro(void);
 void tela_status_assinatura(void);
+void tela_edicao_cadastro(void);
 void tela_cancelar_assinatura(void);
+void tela_sobre(void);
+void tela_equipe(void);
 
 
 //Main
