@@ -16,6 +16,7 @@ void tela_menu(void);
 void tela_assinatura(void);
 void tela_cadastro(void);
 void tela_status_assinatura(void);
+void tela_tipos_assinatura(void);
 void tela_edicao_cadastro(void);
 void tela_cancelar_assinatura(void);
 void tela_sobre(void);
