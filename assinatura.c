@@ -232,7 +232,7 @@ void tela_sobre(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///                      🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                                 ///\n");
+    printf("///                      🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                                    ///\n");
     printf("///                                                                         ///\n");
     printf("///  Programa em desenvolvimento com foco em apresentar um projeto          ///\n");
     printf("///  funcional para Assinatura de Cervejas. Baseado no programa de Gestão   ///\n");
