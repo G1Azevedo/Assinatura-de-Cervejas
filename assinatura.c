@@ -11,7 +11,7 @@
 #include <stdio.h>
 
 //Assinatura de funções
-void tela_bemvindo(void);
+void tela_bem_vindo(void);
 void tela_menu(void);
 void tela_sobre(void);
 void tela_equipe(void);
@@ -25,7 +25,7 @@ void tela_sobre(void);
 
 //Main
 int main(void) {
-    tela_bemvindo();
+    tela_bem_vindo();
     tela_menu();
     tela_assinatura();
     tela_cadastro();
@@ -37,7 +37,7 @@ int main(void) {
     return (0);
 }
 
-void tela_bemvindo(void){
+void tela_bem_vindo(void){
     system("clear||cls");
     printf("\n");
     printf("🇧​ 🇪​ 🇲 ​﹣ 🇻​ 🇮​ 🇳​ 🇩​ 🇴​  🇦​ 🇴​  🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​\n");
