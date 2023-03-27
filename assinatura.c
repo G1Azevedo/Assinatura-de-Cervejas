@@ -15,8 +15,8 @@ void tela_bem_vindo(void);
 void tela_menu(void);
 void tela_assinatura(void);
 void tela_cadastro(void);
-void tela_status_assinatura(void);
 void tela_tipos_assinatura(void);
+void tela_status_assinatura(void);
 void tela_edicao_cadastro(void);
 void tela_cancelar_assinatura(void);
 void tela_sobre(void);
@@ -28,6 +28,7 @@ int main(void) {
     tela_bem_vindo();
     tela_menu();
     tela_assinatura();
+    tela_tipos_assinatura();
     tela_cadastro();
     tela_status_assinatura();
     tela_edicao_cadastro();
@@ -76,7 +77,6 @@ void tela_bem_vindo(void){
 }
 
 void tela_menu(void) {
-    char op;
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -102,7 +102,6 @@ void tela_menu(void) {
 }
 
 void tela_assinatura(void) {
-    char op;
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
@@ -147,6 +146,28 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 
+}
+
+void tela_tipos_assinatura(void) {
+    system("clear||cls");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///          1. Malte Box (4 cervejas puro malte + 1 copo colecionável)     ///\n");
+    printf("///          2. Pilsen Box (4 cervejas pilsen + 1 copo colecionável)        ///\n");
+    printf("///          3. Speacility Box (4 cervejas especiais + 1 copo colecionável) ///\n");
+    printf("///          4. National Box (6 cervejas especiais + 1 copo colecionável)   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Escolha a opção desejada:                                    ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
 }
 
 void tela_status_assinatura(void) {
