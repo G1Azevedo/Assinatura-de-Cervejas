@@ -16,6 +16,7 @@ void tela_menu(void);
 void tela_sobre(void);
 void tela_equipe(void);
 void tela_assinatura(void);
+void tela_edicao_cadastro(void);
 void tela_cadastro(void);
 void tela_status_assinatura(void);
 void tela_cancelar_assinatura(void);
@@ -29,6 +30,7 @@ int main(void) {
     tela_assinatura();
     tela_cadastro();
     tela_status_assinatura();
+    tela_edicao_cadastro();
     tela_cancelar_assinatura();
     tela_sobre();
     
@@ -77,7 +79,7 @@ void tela_menu(void) {
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("//                    🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                                //\n");
+    printf("//                    🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                                        //\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                  > Sistema de Assinatura de Cervejas <                  ///\n");
@@ -89,9 +91,7 @@ void tela_menu(void) {
     printf("///            5. Sobre                                                     ///\n");
     printf("///            0. Sair                                                      ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Escolha a opção desejada:" );
-    scanf("%c", &op);
-    getchar();
+    printf("///            Escolha a opção desejada:                                    ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     getchar();
@@ -104,18 +104,17 @@ void tela_assinatura(void) {
     char op;
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("//                    🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                                //\n");
+    printf("//                    🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                                /\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///            1. Cadastro                                                  ///\n");
     printf("///            2. Status da assinatura                                      ///\n");
     printf("///            3. Tipos de assinatura                                       ///\n");
-    printf("///            4. Cancelar assinatura                                       ///\n");
+    printf("///            4. Editar cadastro                                           ///\n");
+    printf("///            5. Cancelar assinatura                                       ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Escolha a opção desejada: ");
-    scanf("%c", &op);
-    getchar();
+    printf("///            Escolha a opção desejada:                                    ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -171,6 +170,32 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
+void tela_edicao_cadastro(void) {
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                         > Editar cadastro <                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Confirme seu CPF (apenas números):                           ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            OPÇÕES DE EDIÇÃO                                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            E-mail:                                                      ///\n");
+    printf("///            Celular (apenas números):                                    ///\n");
+    printf("///            Cidade:                                                      ///\n");
+    printf("///            Endereço (bairro, rua e nº):                                 ///\n");
+    printf("///            Complemento (opcional):                                      ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
 void tela_cancelar_assinatura(void) {
     system("clear||cls");
     printf("\n");
@@ -180,7 +205,7 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                      > Cancelar Assinatura <                            ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Digite seu CPF:                                              ///\n");
+    printf("///            Confirme seu CPF:                                            ///\n");
     printf("///            Data de nascimento (dd/mm/aaaa):                             ///\n");
     printf("///            Motivo do cancelamento:                                      ///\n");
     printf("///                                                                         ///\n");
