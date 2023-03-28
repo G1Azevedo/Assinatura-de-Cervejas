@@ -77,6 +77,8 @@ void tela_bem_vindo(void){
 }
 
 void tela_menu(void) {
+    char op;
+
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -91,16 +93,20 @@ void tela_menu(void) {
     printf("///            4. Sobre                                                     ///\n");
     printf("///            0. Sair                                                      ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Escolha a opção desejada:                                    ///\n");
+    printf("///            Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     getchar();
-       printf("\n");
+    printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
 
 void tela_assinatura(void) {
+    char op;
+
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
@@ -113,7 +119,35 @@ void tela_assinatura(void) {
     printf("///            5. Cancelar assinatura                                       ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Escolha a opção desejada:                                    ///\n");
+    printf("///            Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void tela_tipos_assinatura(void) {
+    char op;
+
+    system("clear||cls");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///          1. Malte Box (4 cervejas puro malte + 1 copo colecionável)     ///\n");                  
+    printf("///          2. Pilsen Box (4 cervejas pilsen + 1 copo colecionável)        ///\n");
+    printf("///          3. Speacility Box (4 cervejas especiais + 1 copo colecionável) ///\n");
+    printf("///          4. National Box (6 cervejas especiais + 1 copo colecionável)   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Escolha a assinatura desejada: ");
+    scanf("%c", &op);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -145,28 +179,6 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 
-}
-
-void tela_tipos_assinatura(void) {
-    system("clear||cls");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///          1. Malte Box (4 cervejas puro malte + 1 copo colecionável)     ///\n");                  
-    printf("///          2. Pilsen Box (4 cervejas pilsen + 1 copo colecionável)        ///\n");
-    printf("///          3. Speacility Box (4 cervejas especiais + 1 copo colecionável) ///\n");
-    printf("///          4. National Box (6 cervejas especiais + 1 copo colecionável)   ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Escolha a opção desejada:                                    ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
 }
 
 void tela_status_assinatura(void) {
@@ -268,6 +280,7 @@ void tela_sobre(void) {
 }
 
 void tela_equipe(void) {
+
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
