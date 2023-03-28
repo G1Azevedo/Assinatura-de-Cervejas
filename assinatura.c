@@ -98,7 +98,6 @@ void tela_menu(void) {
     getchar();
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
-    getchar();
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
@@ -157,6 +156,16 @@ void tela_tipos_assinatura(void) {
 }
 
 void tela_cadastro(void) {
+    char CPF[12];
+    char nome[51];
+    char email[51];
+    char nascimento[11];
+    char celular[12];
+    char cidade[51];
+    char endereco[80];
+    char complemento[50];
+
+
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -165,14 +174,30 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                         > Cadastro <                                    ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            CPF (apenas números):                                        ///\n");
-    printf("///            Nome completo:                                               ///\n");
-    printf("///            E-mail:                                                      ///\n");
-    printf("///            Data de Nascimento (dd/mm/aaaa):                             ///\n");
-    printf("///            Celular  (apenas números):                                   ///\n");
-    printf("///            Cidade:                                                      ///\n");
-    printf("///            Endereço (bairro, rua e nº):                                 ///\n");
-    printf("///            Complemento (opcional):                                      ///\n");
+    printf("///            CPF (apenas números): ");
+    scanf("%[0-9]", CPF);
+    getchar();
+    printf("///            Nome completo: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+    getchar();
+    printf("///            E-mail: ");
+    scanf("%[A-Za-z0-9@._]", email);
+    getchar();
+    printf("///            Data de Nascimento (dd/mm/aaaa): ");
+    scanf("%[0-9-/]", nascimento);
+    getchar();
+    printf("///            Celular  (apenas números): ");
+    scanf("%[0-9]", celular);
+    getchar();
+    printf("///            Cidade: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade);
+    getchar();
+    printf("///            Endereço (bairro, rua e nº): ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco);
+    getchar();
+    printf("///            Complemento (opcional):");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
@@ -182,6 +207,9 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 void tela_status_assinatura(void) {
+    char CPF[12];
+    char nome[51];
+
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -190,8 +218,12 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                      > Status da Assinatura <                           ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            CPF (apenas números):                                        ///\n");
-    printf("///            Nome completo:                                               ///\n");
+    printf("///            CPF (apenas números): ");
+    scanf("%[0-9]", CPF);
+    getchar();
+    printf("///            Nome completo: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
@@ -204,6 +236,13 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 void tela_edicao_cadastro(void) {
+    char CPF[12];
+    char email[51];
+    char celular[12];
+    char cidade[51];
+    char endereco[80];
+    char complemento[50];
+
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -212,15 +251,27 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                         > Editar cadastro <                             ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Confirme seu CPF (apenas números):                           ///\n");
+    printf("///            Confirme seu CPF (apenas números): ");
+    scanf("%[0-9]", CPF);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///            OPÇÕES DE EDIÇÃO                                             ///\n");
     printf("///                                                                         ///\n");
-    printf("///            E-mail:                                                      ///\n");
-    printf("///            Celular (apenas números):                                    ///\n");
-    printf("///            Cidade:                                                      ///\n");
-    printf("///            Endereço (bairro, rua e nº):                                 ///\n");
-    printf("///            Complemento (opcional):                                      ///\n");
+    printf("///            E-mail: ");
+    scanf("%[A-Za-z0-9@._]", email);
+    getchar();
+    printf("///            Celular  (apenas números): ");
+    scanf("%[0-9]", celular);
+    getchar();
+    printf("///            Cidade: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade);
+    getchar();
+    printf("///            Endereço (bairro, rua e nº): ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco);
+    getchar();
+    printf("///            Complemento (opcional):");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
@@ -230,6 +281,10 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 void tela_cancelar_assinatura(void) {
+    char CPF[12];
+    char nascimento[11];
+    char cancelamento[100];
+
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -238,9 +293,15 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                      > Cancelar Assinatura <                            ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Confirme seu CPF:                                            ///\n");
-    printf("///            Data de nascimento (dd/mm/aaaa):                             ///\n");
-    printf("///            Motivo do cancelamento:                                      ///\n");
+    printf("///            Confirme seu CPF (apenas números): ");
+    scanf("%[0-9]", CPF);
+    getchar();
+    printf("///            Data de Nascimento (dd/mm/aaaa): ");
+    scanf("%[0-9-/]", nascimento);
+    getchar();
+    printf("///            Motivo do cancelamento: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",cancelamento);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
