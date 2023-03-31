@@ -14,11 +14,11 @@
 void tela_bem_vindo(void);
 void tela_menu(void);
 void tela_assinatura(void);
-void tela_cadastro(void);
 void tela_tipos_assinatura(void);
+void tela_cadastro(void);
 void tela_status_assinatura(void);
 void tela_edicao_cadastro(void);
-void tela_cancelar_assinatura(void);
+void tela_excluir_assinatura(void);
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -32,7 +32,7 @@ int main(void) {
     tela_cadastro();
     tela_status_assinatura();
     tela_edicao_cadastro();
-    tela_cancelar_assinatura();
+    tela_excluir_assinatura();
     tela_sobre();
     tela_equipe();
 
@@ -280,7 +280,7 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
-void tela_cancelar_assinatura(void) {
+void tela_excluir_assinatura(void) {
     char CPF[12];
     char nascimento[11];
     char cancelamento[100];
