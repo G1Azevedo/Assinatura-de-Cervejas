@@ -131,7 +131,7 @@ void tela_assinatura(void) {
 
 void tela_tipos_assinatura(void) {
     char op;
-
+    //Continuação da opção 1
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
