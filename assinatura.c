@@ -87,9 +87,9 @@ void tela_menu(void) {
     printf("///                                                                         ///\n");
     printf("///                  > Sistema de Assinatura de Cervejas <                  ///\n");
     printf("///                                                                         ///\n");
-    printf("///            1. Módulo Assinatura                                         ///\n");
-    printf("///            2. Módulo Clientes                                           ///\n");
-    printf("///            3. Módulo Produtos                                           ///\n");
+    printf("///            1. Módulo Cliente                                            ///\n");
+    printf("///            2. Módulo Produto                                            ///\n");
+    printf("///            3. Módulo Fornecedor                                         ///\n");
     printf("///            4. Sobre                                                     ///\n");
     printf("///            0. Sair                                                      ///\n");
     printf("///                                                                         ///\n");
