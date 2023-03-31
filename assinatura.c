@@ -19,8 +19,13 @@ void tela_cadastro(void);
 void tela_status_assinatura(void);
 void tela_edicao_cadastro(void);
 void tela_excluir_assinatura(void);
+void tela_recuperar_assinatura();
 void tela_sobre(void);
 void tela_equipe(void);
+void pesquisar_produto(void);
+void cadastrar_produto();
+void excluir_produto();
+
 
 
 ///Main
@@ -33,6 +38,7 @@ int main(void) {
     tela_status_assinatura();
     tela_edicao_cadastro();
     tela_excluir_assinatura();
+    tela_recuperar_assinatura();
     tela_sobre();
     tela_equipe();
 
@@ -313,6 +319,31 @@ printf("////////////////////////////////////////////////////////////////////////
     getchar();
 
 }
+
+void tela_recuperar_assinatura(void) {
+    char CPF[12];
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = Recuperar Assinatura = =                        ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Digite o CPF para recuperar (apenas números): ");       
+    scanf("%[0-9]", CPF);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
 
 //Início do módulo 2
 
