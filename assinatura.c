@@ -179,7 +179,7 @@ void tela_cadastro(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Cadastro = =                                  ///\n");
+    printf("///                     = = Cadastro de cliente = =                         ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            CPF (apenas números): ");
@@ -357,8 +357,8 @@ void tela_menu_produtos(void) {
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///            1. Pesquisar produto                                         ///\n");
-    printf("///            2. Cadastrar produto                                         ///\n");
+    printf("///            1. Cadastrar produto                                         ///\n");
+    printf("///            2. Pesquisar produto                                         ///\n");
     printf("///            3. Excluir produto                                           ///\n");
     printf("///            4. Recuperar produto                                         ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
@@ -373,6 +373,8 @@ void tela_menu_produtos(void) {
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
+
+
 
 
 
