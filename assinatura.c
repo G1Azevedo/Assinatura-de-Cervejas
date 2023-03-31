@@ -111,11 +111,11 @@ void tela_assinatura(void) {
     printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///            1. Cadastro                                                  ///\n");
-    printf("///            2. Status da assinatura                                      ///\n");
-    printf("///            3. Tipos de assinatura                                       ///\n");
-    printf("///            4. Editar cadastro                                           ///\n");
-    printf("///            5. Cancelar assinatura                                       ///\n");
+    printf("///            1. Cadastro de cliente                                       ///\n");
+    printf("///            2. Pesquisar assinatura                                      ///\n");
+    printf("///            3. Excluir assinatura                                        ///\n");
+    printf("///            4. Editar assinatura                                         ///\n");
+    printf("///            5. Recuperar assinatura                                      ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
     printf("///            Escolha a opção desejada: ");
