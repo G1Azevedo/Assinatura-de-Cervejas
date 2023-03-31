@@ -85,7 +85,7 @@ void tela_menu(void) {
     printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///                  > Sistema de Assinatura de Cervejas <                  ///\n");
+    printf("///                = = Sistema de Assinatura de Cervejas = =                ///\n");
     printf("///                                                                         ///\n");
     printf("///            1. Módulo Cliente                                            ///\n");
     printf("///            2. Módulo Produto                                            ///\n");
@@ -107,8 +107,6 @@ void tela_assinatura(void) {
     char op;
 
     system("clear||cls");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///            1. Cadastro de cliente                                       ///\n");
@@ -169,7 +167,7 @@ void tela_cadastro(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                         > Cadastro <                                    ///\n");
+    printf("///                       = = Cadastro = =                                  ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            CPF (apenas números): ");
