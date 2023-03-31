@@ -103,6 +103,8 @@ void tela_menu(void) {
     getchar();
 }
 
+//Telas do módulo 1
+
 void tela_assinatura(void) {
     char op;
 
@@ -129,7 +131,7 @@ void tela_assinatura(void) {
 
 void tela_tipos_assinatura(void) {
     char op;
-    //Continuação da opção 1
+
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
@@ -312,6 +314,15 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
+//Início do módulo 2
+
+
+
+
+
+
+
+//Sobre & equipe
 void tela_sobre(void) {
     system("clear||cls");
     printf("\n");
