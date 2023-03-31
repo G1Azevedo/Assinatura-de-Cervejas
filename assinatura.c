@@ -12,26 +12,27 @@
 
 //Assinatura de funções
 void tela_bem_vindo(void);
-void tela_menu(void);
+void tela_menu_geral(void);
 void tela_assinatura(void);
 void tela_tipos_assinatura(void);
 void tela_cadastro(void);
 void tela_status_assinatura(void);
 void tela_edicao_cadastro(void);
 void tela_excluir_assinatura(void);
-void tela_recuperar_assinatura();
+void tela_recuperar_assinatura(void);
+void tela_menu_produtos(void);
 void tela_sobre(void);
 void tela_equipe(void);
 void pesquisar_produto(void);
-void cadastrar_produto();
-void excluir_produto();
+void cadastrar_produto(void);
+void excluir_produto(void);
 
 
 
 ///Main
 int main(void) {
     tela_bem_vindo();
-    tela_menu();
+    tela_menu_geral();
     tela_assinatura();
     tela_tipos_assinatura();
     tela_cadastro();
@@ -39,6 +40,7 @@ int main(void) {
     tela_edicao_cadastro();
     tela_excluir_assinatura();
     tela_recuperar_assinatura();
+    tela_menu_produtos();
     tela_sobre();
     tela_equipe();
 
@@ -82,7 +84,7 @@ void tela_bem_vindo(void){
     getchar();
 }
 
-void tela_menu(void) {
+void tela_menu_geral(void) {
     char op;
 
     system("clear||cls");
@@ -116,6 +118,8 @@ void tela_assinatura(void) {
 
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                       = = Módulo Cliente = =                            ///\n");
     printf("///                                                                         ///\n");
     printf("///            1. Cadastro de cliente                                       ///\n");
     printf("///            2. Status da assinatura                                      ///\n");
@@ -256,7 +260,7 @@ void tela_edicao_cadastro(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Editar cadastro = =                           ///\n");
+    printf("///                       = = Editar assinatura = =                         ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Confirme seu CPF (apenas números): ");
@@ -347,6 +351,28 @@ printf("////////////////////////////////////////////////////////////////////////
 
 //Início do módulo 2
 
+void tela_menu_produtos(void) {
+    char op;
+
+    system("clear||cls");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///            1. Pesquisar produto                                         ///\n");
+    printf("///            2. Cadastrar produto                                         ///\n");
+    printf("///            3. Excluir produto                                           ///\n");
+    printf("///            4. Recuperar produto                                         ///\n");
+    printf("///            0. Voltar ao menu anterior                                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
 
 
 
