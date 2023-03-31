@@ -113,8 +113,8 @@ void tela_assinatura(void) {
     printf("///                                                                         ///\n");
     printf("///            1. Cadastro de cliente                                       ///\n");
     printf("///            2. Pesquisar assinatura                                      ///\n");
-    printf("///            3. Excluir assinatura                                        ///\n");
-    printf("///            4. Editar assinatura                                         ///\n");
+    printf("///            3. Editar assinatura                                         ///\n");
+    printf("///            4. Excluir assinatura                                        ///\n");
     printf("///            5. Recuperar assinatura                                      ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
