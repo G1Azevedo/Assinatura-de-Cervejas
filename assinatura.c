@@ -134,8 +134,6 @@ void tela_tipos_assinatura(void) {
     //Continuação da opção 1
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///          1. Malte Box (4 cervejas puro malte + 1 copo colecionável)     ///\n");                  
     printf("///          2. Pilsen Box (4 cervejas pilsen + 1 copo colecionável)        ///\n");
