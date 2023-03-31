@@ -248,14 +248,14 @@ void tela_edicao_cadastro(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                         > Editar cadastro <                             ///\n");
+    printf("///                       = = Editar cadastro = =                           ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Confirme seu CPF (apenas números): ");
     scanf("%[0-9]", CPF);
     getchar();
     printf("///                                                                         ///\n");
-    printf("///            OPÇÕES DE EDIÇÃO                                             ///\n");
+    printf("///                       = = OPÇÕES DE EDIÇÃO = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///            E-mail: ");
     scanf("%[A-Za-z0-9@._]", email);
@@ -290,7 +290,7 @@ void tela_cancelar_assinatura(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                      > Cancelar Assinatura <                            ///\n");
+    printf("///                     = = Excluir Assinatura = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Confirme seu CPF (apenas números): ");
