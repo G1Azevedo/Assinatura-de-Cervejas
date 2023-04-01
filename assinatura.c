@@ -298,7 +298,7 @@ printf("////////////////////////////////////////////////////////////////////////
 void tela_excluir_assinatura(void) {
     char CPF[12];
     char nascimento[11];
-    char cancelamento[100];
+    char exclusao[100];
 
     system("clear||cls");
     printf("\n");
@@ -314,8 +314,8 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///            Data de Nascimento (dd/mm/aaaa): ");
     scanf("%[0-9-/]", nascimento);
     getchar();
-    printf("///            Motivo do cancelamento: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",cancelamento);
+    printf("///            Motivo da exclusão: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",exclusao);
     getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
