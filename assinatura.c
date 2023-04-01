@@ -425,7 +425,7 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 void tela_excluir_produto(void) {
-    char CPF[12];
+    char codigo_produto[4];
     char nascimento[11];
     char exclusao[100];
 
@@ -437,11 +437,8 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                     = = Excluir Assinatura = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Confirme seu CPF (apenas números): ");
+    printf("///            Digite o código do produto: ");
     scanf("%[0-9]", CPF);
-    getchar();
-    printf("///            Data de Nascimento (dd/mm/aaaa): ");
-    scanf("%[0-9-/]", nascimento);
     getchar();
     printf("///            Motivo da exclusão: ");
     scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",exclusao);
