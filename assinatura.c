@@ -28,6 +28,7 @@ void tela_recuperar_produto(void);
 void tela_menu_fornecedor(void);
 void tela_cadastro_fornecedor(void);
 void tela_pesquisar_fornecedor(void);
+void tela_excluir_fornecedor(void);
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -486,9 +487,32 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
+//Início Módulo 3
+void tela_assinatura(void) {
+    char op;
 
-
-
+    system("clear||cls");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                       = = Módulo Fornecedor = =                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            1. Cadastro de fornecedor                                    ///\n");
+    printf("///            2. Pesquisar fornecedor                                      ///\n");
+    printf("///            3. Editar assinatura                                         ///\n");
+    printf("///            4. Excluir assinatura                                        ///\n");
+    printf("///            5. Recuperar assinatura                                      ///\n");
+    printf("///            0. Voltar ao menu anterior                                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
 
 //Sobre & equipe
 void tela_sobre(void) {
