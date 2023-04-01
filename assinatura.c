@@ -28,6 +28,7 @@ void tela_recuperar_produto(void);
 void tela_menu_fornecedor(void);
 void tela_cadastro_fornecedor(void);
 void tela_pesquisar_fornecedor(void);
+void tela_editar_fornecedor(void);
 void tela_excluir_fornecedor(void);
 void tela_recuperar_fornecedor(void);
 void tela_sobre(void);
@@ -55,6 +56,7 @@ int main(void) {
     tela_menu_fornecedor();
     tela_cadastro_fornecedor();
     tela_pesquisar_fornecedor();
+    tela_editar_fornecedor();
     tela_excluir_fornecedor();
     tela_recuperar_fornecedor();
     tela_sobre();
