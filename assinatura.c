@@ -29,6 +29,7 @@ void tela_menu_fornecedor(void);
 void tela_cadastro_fornecedor(void);
 void tela_pesquisar_fornecedor(void);
 void tela_editar_fornecedor(void);
+void tela_excluir_fornecedor(void);
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -56,6 +57,7 @@ int main(void) {
     tela_cadastro_fornecedor();
     tela_pesquisar_fornecedor();
     tela_editar_fornecedor();
+    tela_excluir_fornecedor();
     tela_sobre();
     tela_equipe();
 
@@ -627,6 +629,33 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
+void tela_excluir_fornecedor(void) {
+    char CNPJ[15];
+    char exclusao[100];
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = Excluir Fornecedor = =                          ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Confirme o CNPJ (apenas números): ");
+    scanf("%[0-9]", CNPJ);
+    getchar();
+    printf("///            Motivo da exclusão: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",exclusao);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
 
 
 //Sobre & equipe
