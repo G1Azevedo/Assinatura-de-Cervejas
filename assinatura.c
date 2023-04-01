@@ -25,6 +25,7 @@ void tela_sobre(void);
 void tela_equipe(void);
 void pesquisar_produto(void);
 void tela_cadastro_produto(void);
+void tela_pesquisar_produto(void);
 void excluir_produto(void);
 
 
@@ -42,6 +43,7 @@ int main(void) {
     tela_recuperar_assinatura();
     tela_menu_produtos();
     tela_cadastro_produto();
+    tela_pesquisar_produto();
     tela_sobre();
     tela_equipe();
 
@@ -405,6 +407,22 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
+void tela_pesquisar_produto(void) {
+    char codigo_produto[4];
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = Pesquisar produto = =                           ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///       Digite o código do produto: ");
+    scanf("%[0-9]", codigo_produto);
+    getchar();
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+}
 
 
 
