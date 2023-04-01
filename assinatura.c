@@ -27,8 +27,10 @@ void tela_excluir_produto(void);
 void tela_recuperar_produto(void);
 void tela_menu_fornecedor(void);
 void tela_cadastro_fornecedor(void);
+void tela_pesquisar_fornecedor(void);
 void tela_sobre(void);
 void tela_equipe(void);
+
 
 
 
