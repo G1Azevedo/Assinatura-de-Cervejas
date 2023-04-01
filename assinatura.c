@@ -55,6 +55,8 @@ int main(void) {
     tela_menu_fornecedor();
     tela_cadastro_fornecedor();
     tela_pesquisar_fornecedor();
+    tela_excluir_fornecedor();
+    tela_recuperar_fornecedor();
     tela_sobre();
     tela_equipe();
 
