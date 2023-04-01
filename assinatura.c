@@ -54,11 +54,6 @@ int main(void) {
     tela_excluir_produto();
     tela_recuperar_produto();
     tela_menu_fornecedor();
-    tela_cadastro_fornecedor();
-    tela_pesquisar_fornecedor();
-    tela_editar_fornecedor();
-    tela_excluir_fornecedor();
-    tela_recuperar_fornecedor();
     tela_sobre();
     tela_equipe();
 
@@ -448,7 +443,7 @@ void tela_excluir_produto(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Excluir Assinatura = =                          ///\n");
+    printf("///                     = = Excluir Produto = =                             ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Digite o código do produto: ");
@@ -493,7 +488,7 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 //Início Módulo 3
-void tela_assinatura(void) {
+void tela_menu_fornecedor(void) {
     char op;
 
     system("clear||cls");
@@ -504,8 +499,8 @@ void tela_assinatura(void) {
     printf("///            1. Cadastro de fornecedor                                    ///\n");
     printf("///            2. Pesquisar fornecedor                                      ///\n");
     printf("///            3. Editar assinatura                                         ///\n");
-    printf("///            4. Excluir assinatura                                        ///\n");
-    printf("///            5. Recuperar assinatura                                      ///\n");
+    printf("///            4. Excluir fornecedor                                        ///\n");
+    printf("///            5. Recuperar fornecedor                                      ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
     printf("///            Escolha a opção desejada: ");
