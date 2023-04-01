@@ -26,6 +26,7 @@ void tela_equipe(void);
 void tela_cadastro_produto(void);
 void tela_pesquisar_produto(void);
 void tela_excluir_produto(void);
+void tela_recuperar_produto(void);
 
 
 
@@ -44,6 +45,7 @@ int main(void) {
     tela_cadastro_produto();
     tela_pesquisar_produto();
     tela_excluir_produto();
+    tela_recuperar_produto();
     tela_sobre();
     tela_equipe();
 
@@ -441,6 +443,31 @@ printf("////////////////////////////////////////////////////////////////////////
     getchar();
     printf("///            Motivo da exclusão: ");
     scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",exclusao);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
+
+void tela_recuperar_produto(void) {
+    char codigo_produto[4];
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = Recuperar Produto = =                           ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Digite o código para recuperar o produto: ");       
+    scanf("%[0-9]", codigo_produto);
     getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
