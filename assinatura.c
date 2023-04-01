@@ -27,10 +27,6 @@ void tela_excluir_produto(void);
 void tela_recuperar_produto(void);
 void tela_menu_fornecedor(void);
 void tela_cadastro_fornecedor(void);
-void tela_pesquisar_fornecedor(void);
-void tela_editar_fornecedor(void);
-void tela_excluir_fornecedor(void);
-void tela_recuperar_fornecedor(void);
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -54,6 +50,7 @@ int main(void) {
     tela_excluir_produto();
     tela_recuperar_produto();
     tela_menu_fornecedor();
+    tela_cadastro_fornecedor();
     tela_sobre();
     tela_equipe();
 
@@ -370,6 +367,8 @@ void tela_menu_produtos(void) {
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
+    printf("///                       = = Módulo Produto = =                            ///\n");
+    printf("///                                                                         ///\n");
     printf("///            1. Cadastrar produto                                         ///\n");
     printf("///            2. Pesquisar produto                                         ///\n");
     printf("///            3. Excluir produto                                           ///\n");
@@ -498,7 +497,7 @@ void tela_menu_fornecedor(void) {
     printf("///                                                                         ///\n");
     printf("///            1. Cadastro de fornecedor                                    ///\n");
     printf("///            2. Pesquisar fornecedor                                      ///\n");
-    printf("///            3. Editar assinatura                                         ///\n");
+    printf("///            3. Editar fornecedor                                         ///\n");
     printf("///            4. Excluir fornecedor                                        ///\n");
     printf("///            5. Recuperar fornecedor                                      ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
@@ -512,6 +511,53 @@ void tela_menu_fornecedor(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+}
+
+void tela_cadastro_fornecedor(void) {
+    char CNPJ[15];
+    char nome_fornecedor[51];
+    char email_fornecedor[51];
+    char telefone_fornecedor[12];
+    char cidade_fornecedor[51];
+    char endereco_fornecedor[80];
+    char complemento_fornecedor[50];
+
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = Cadastro de fornecedor = =                      ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            CNPJ (apenas números): ");
+    scanf("%[0-9]", CNPJ);
+    getchar();
+    printf("///            Nome do fornecedor: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome_fornecedor);
+    getchar();
+    printf("///            E-mail do fornecedor: ");
+    scanf("%[A-Za-z0-9@._]", email_fornecedor);
+    getchar();
+    printf("///            Telefone  (apenas números): ");
+    scanf("%[0-9]", telefone_fornecedor);
+    getchar();
+    printf("///            Cidade: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade_fornecedor);
+    getchar();
+    printf("///            Endereço (bairro, rua e nº): ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco_fornecedor);
+    getchar();
+    printf("///            Complemento (opcional):");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento_fornecedor);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
 }
 
 //Sobre & equipe
