@@ -55,6 +55,7 @@ int main(void) {
     tela_menu_fornecedor();
     tela_cadastro_fornecedor();
     tela_pesquisar_fornecedor();
+    tela_editar_fornecedor();
     tela_sobre();
     tela_equipe();
 
@@ -580,6 +581,52 @@ printf("////////////////////////////////////////////////////////////////////////
     getchar();
     printf("///////////////////////////////////////////////////////////////////////////////\n");
 }
+
+void tela_editar_fornecedor(void) {
+    char CNPJ[15];
+    char email_fornecedor[51];
+    char telefone_fornecedor[12];
+    char cidade_fornecedor[51];
+    char endereco_fornecedor[80];
+    char complemento_fornecedor[50];
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                       = = Editar fornecedor = =                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Confirme o CNPJ (apenas números): ");
+    scanf("%[0-9]", CNPJ);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                       = = OPÇÕES DE EDIÇÃO = =                          ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            E-mail: ");
+    scanf("%[A-Za-z0-9@._]", email_fornecedor);
+    getchar();
+    printf("///            Telefone (apenas números): ");
+    scanf("%[0-9]", telefone_fornecedor);
+    getchar();
+    printf("///            Cidade: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade_fornecedor);
+    getchar();
+    printf("///            Endereço (bairro, rua e nº): ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco_fornecedor);
+    getchar();
+    printf("///            Complemento (opcional):");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento_fornecedor);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
 
 
 //Sobre & equipe
