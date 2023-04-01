@@ -24,7 +24,7 @@ void tela_menu_produtos(void);
 void tela_sobre(void);
 void tela_equipe(void);
 void pesquisar_produto(void);
-void cadastrar_produto(void);
+void tela_cadastro_produto(void);
 void excluir_produto(void);
 
 
@@ -41,6 +41,7 @@ int main(void) {
     tela_excluir_assinatura();
     tela_recuperar_assinatura();
     tela_menu_produtos();
+    tela_cadastro_produto();
     tela_sobre();
     tela_equipe();
 
@@ -372,6 +373,36 @@ void tela_menu_produtos(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+}
+
+void tela_cadastro_produto(void) {
+    char codigo_produto[4];
+    char nome_produto[51];
+    char nome_fornecedor[51];
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = Cadastro de produto = =                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Digite o código do produto: ");
+    scanf("%[0-9]", codigo_produto);
+    getchar();
+    printf("///            Digite o nome do produto: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome_produto);
+    getchar();
+    printf("///            Digite o nome do fornecedor: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome_fornecedor);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
 }
 
 
