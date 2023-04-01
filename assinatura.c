@@ -26,6 +26,7 @@ void tela_equipe(void);
 void tela_cadastro_produto(void);
 void tela_pesquisar_produto(void);
 void tela_menu_fornecedor(void);
+void tela_cadastro_fornecedor(void);
 void tela_excluir_produto(void);
 void tela_recuperar_produto(void);
 
@@ -48,6 +49,7 @@ int main(void) {
     tela_excluir_produto();
     tela_recuperar_produto();
     tela_menu_fornecedor();
+    tela_cadastro_fornecedor();
     tela_sobre();
     tela_equipe();
 
