@@ -657,6 +657,30 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
+void tela_recuperar_fornecedor(void) {
+    char CNPJ[15];
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = Recuperar Fornecedor = =                        ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Digite o CNPJ para recuperar (apenas números): ");       
+    scanf("%[0-9]", CNPJ);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
 
 //Sobre & equipe
 void tela_sobre(void) {
