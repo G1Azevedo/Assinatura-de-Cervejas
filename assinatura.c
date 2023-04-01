@@ -53,6 +53,7 @@ int main(void) {
     tela_recuperar_produto();
     tela_menu_fornecedor();
     tela_cadastro_fornecedor();
+    tela_pesquisar_fornecedor();
     tela_sobre();
     tela_equipe();
 
@@ -561,6 +562,24 @@ printf("////////////////////////////////////////////////////////////////////////
     getchar();
 
 }
+
+void tela_pesquisar_fornecedor(void) {
+    char CNPJ[15];
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = Pesquisar fornecedor = =                        ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///       Digite o CNPJ do fornecedor: ");
+    scanf("%[0-9]", CNPJ);
+    getchar();
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+}
+
 
 //Sobre & equipe
 void tela_sobre(void) {
