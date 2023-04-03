@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-//Assinatura de funções
+//Assinatura de funções//
 void tela_bem_vindo(void);
 void tela_menu_geral(void);
 void tela_assinatura(void);
