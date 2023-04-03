@@ -15,9 +15,9 @@
 
 void tela_bem_vindo(void);
 
-void tela_menu_geral(void);
+char tela_menu_geral(void);
 
-void tela_assinatura(void);
+char tela_menu_assinatura(void);
 void tela_tipos_assinatura(void);
 void tela_cadastro(void);
 void tela_status_assinatura(void);
@@ -25,13 +25,13 @@ void tela_edicao_cadastro(void);
 void tela_excluir_assinatura(void);
 void tela_recuperar_assinatura(void);
 
-void tela_menu_produtos(void);
+char tela_menu_produtos(void);
 void tela_cadastro_produto(void);
 void tela_pesquisar_produto(void);
 void tela_excluir_produto(void);
 void tela_recuperar_produto(void);
 
-void tela_menu_fornecedor(void);
+char tela_menu_fornecedor(void);
 void tela_cadastro_fornecedor(void);
 void tela_pesquisar_fornecedor(void);
 void tela_editar_fornecedor(void);
@@ -48,7 +48,7 @@ void tela_equipe(void);
 int main(void) {
     tela_bem_vindo();
     tela_menu_geral();
-    tela_assinatura();
+    tela_menu_assinatura();
     tela_tipos_assinatura();
     tela_cadastro();
     tela_status_assinatura();
@@ -108,7 +108,7 @@ void tela_bem_vindo(void){
     getchar();
 }
 
-void tela_menu_geral(void) {
+char tela_menu_geral(void) {
     char op;
 
     system("clear||cls");
@@ -137,7 +137,7 @@ void tela_menu_geral(void) {
 
 //Telas do módulo 1
 
-void tela_assinatura(void) {
+char tela_menu_assinatura(void) {
     char op;
 
     system("clear||cls");
@@ -375,7 +375,7 @@ printf("////////////////////////////////////////////////////////////////////////
 
 //Início do módulo 2
 
-void tela_menu_produtos(void) {
+char tela_menu_produtos(void) {
     char op;
 
     system("clear||cls");
@@ -501,7 +501,7 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 //Início Módulo 3
-void tela_menu_fornecedor(void) {
+char tela_menu_fornecedor(void) {
     char op;
 
     system("clear||cls");
