@@ -46,30 +46,26 @@ void tela_equipe(void);
 
 ///Main
 int main(void) {
-    tela_bem_vindo();
-    tela_menu_geral();
-    tela_menu_assinatura();
-    tela_tipos_assinatura();
-    tela_cadastro();
-    tela_status_assinatura();
-    tela_edicao_cadastro();
-    tela_excluir_assinatura();
-    tela_recuperar_assinatura();
-    tela_menu_produtos();
-    tela_cadastro_produto();
-    tela_pesquisar_produto();
-    tela_excluir_produto();
-    tela_recuperar_produto();
-    tela_menu_fornecedor();
-    tela_cadastro_fornecedor();
-    tela_pesquisar_fornecedor();
-    tela_editar_fornecedor();
-    tela_excluir_fornecedor();
-    tela_sobre();
-    tela_equipe();
+    char opcao;
 
-    return (0);
+    do {
+        opcao = tela_menu_geral();
+        switch(opcao) {
+            case '1':   tela_menu_assinatura();
+                        break;
+            case '2':   tela_menu_produtos();
+                        break;
+            case '3':   tela_menu_fornecedor();
+                        break;
+            case '4':   tela_sobre();
+                        tela_equipe();
+                        break;
+        } 	
+    } while (opcao != '0');
+
+    return 0;
 }
+    
 
 void tela_bem_vindo(void){
     system("clear||cls");
@@ -133,6 +129,7 @@ char tela_menu_geral(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 //Telas do módulo 1
