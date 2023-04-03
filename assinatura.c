@@ -9,6 +9,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 
 //Assinatura de funções//
 void tela_bem_vindo(void);
@@ -116,7 +117,7 @@ void tela_menu_geral(void) {
     printf("///            2. Módulo Produto                                            ///\n");
     printf("///            3. Módulo Fornecedor                                         ///\n");
     printf("///            4. Sobre                                                     ///\n");
-    printf("///            0. Sair                                                      ///\n");
+    printf("///            0. Encerrar                                                  ///\n");
     printf("///                                                                         ///\n");
     printf("///            Escolha a opção desejada: ");
     scanf("%c", &op);
