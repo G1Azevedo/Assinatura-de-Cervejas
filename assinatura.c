@@ -11,9 +11,12 @@
 #include <stdio.h>
 #include <unistd.h>
 
-//Assinatura de funções//
+//Assinatura de funções
+
 void tela_bem_vindo(void);
+
 void tela_menu_geral(void);
+
 void tela_assinatura(void);
 void tela_tipos_assinatura(void);
 void tela_cadastro(void);
@@ -21,16 +24,19 @@ void tela_status_assinatura(void);
 void tela_edicao_cadastro(void);
 void tela_excluir_assinatura(void);
 void tela_recuperar_assinatura(void);
+
 void tela_menu_produtos(void);
 void tela_cadastro_produto(void);
 void tela_pesquisar_produto(void);
 void tela_excluir_produto(void);
 void tela_recuperar_produto(void);
+
 void tela_menu_fornecedor(void);
 void tela_cadastro_fornecedor(void);
 void tela_pesquisar_fornecedor(void);
 void tela_editar_fornecedor(void);
 void tela_excluir_fornecedor(void);
+
 void tela_sobre(void);
 void tela_equipe(void);
 
