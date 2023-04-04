@@ -56,7 +56,7 @@ int main(void) {
         switch(opcao) {
             case '1':   modulo_assinatura();
                         break;
-            //case '2':   modulo_produtos();
+            case '2':   modulo_produtos();
                         break;
             //case '3':   modulo_fornecedor();
                         break;
@@ -396,6 +396,23 @@ printf("////////////////////////////////////////////////////////////////////////
 
 
 //Início do módulo 2
+
+void modulo_produtos(void) {
+    char opcao;
+    do {
+        opcao = tela_menu_produtos();
+        switch(opcao) {
+            case '1': 	tela_cadastro_produto();
+                        break;
+            case '2': 	tela_pesquisar_produto();
+                        break;
+            case '3': 	tela_excluir_produto();
+                        break;
+            case '4': 	tela_recuperar_produto();
+                        break;                        
+        } 		
+    } while (opcao != '0');
+}
 
 char tela_menu_produtos(void) {
     char op;
