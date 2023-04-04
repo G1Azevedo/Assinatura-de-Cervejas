@@ -17,6 +17,7 @@ void tela_bem_vindo(void);
 
 char tela_menu_geral(void);
 
+void modulo_assinatura(void);
 char tela_menu_assinatura(void);
 void tela_tipos_assinatura(void);
 void tela_cadastro(void);
@@ -25,12 +26,14 @@ void tela_edicao_cadastro(void);
 void tela_excluir_assinatura(void);
 void tela_recuperar_assinatura(void);
 
+void modulo_produtos();
 char tela_menu_produtos(void);
 void tela_cadastro_produto(void);
 void tela_pesquisar_produto(void);
 void tela_excluir_produto(void);
 void tela_recuperar_produto(void);
 
+void modulo_fornecedor(void);
 char tela_menu_fornecedor(void);
 void tela_cadastro_fornecedor(void);
 void tela_pesquisar_fornecedor(void);
@@ -51,11 +54,11 @@ int main(void) {
     do {
         opcao = tela_menu_geral();
         switch(opcao) {
-            case '1':   tela_menu_assinatura();
+            case '1':   modulo_assinatura();
                         break;
-            case '2':   tela_menu_produtos();
+            //case '2':   modulo_produtos();
                         break;
-            case '3':   tela_menu_fornecedor();
+            //case '3':   modulo_fornecedor();
                         break;
             case '4':   tela_sobre();
                         tela_equipe();
@@ -134,6 +137,26 @@ char tela_menu_geral(void) {
 
 //Telas do módulo 1
 
+void modulo_assinatura(void) {
+    char opcao;
+    do {
+        opcao = tela_menu_assinatura();
+        switch(opcao) {
+            case '1': 	tela_tipos_assinatura();
+                        tela_cadastro();
+                        break;
+            case '2': 	tela_status_assinatura();
+                        break;
+            case '3': 	tela_edicao_cadastro();
+                        break;
+            case '4': 	tela_excluir_assinatura();
+                        break;
+            case '5': 	tela_recuperar_assinatura();
+                        break;                        
+        } 		
+    } while (opcao != '0');
+}
+
 char tela_menu_assinatura(void) {
     char op;
 
@@ -158,7 +181,9 @@ char tela_menu_assinatura(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
+
 
 void tela_tipos_assinatura(void) {
     char op;
