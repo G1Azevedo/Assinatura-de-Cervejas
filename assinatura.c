@@ -752,6 +752,7 @@ printf("////////////////////////////////////////////////////////////////////////
 
 
 //Sobre & equipe
+
 void tela_sobre(void) {
     system("clear||cls");
     printf("\n");
