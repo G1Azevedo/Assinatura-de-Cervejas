@@ -39,6 +39,7 @@ void tela_cadastro_fornecedor(void);
 void tela_pesquisar_fornecedor(void);
 void tela_editar_fornecedor(void);
 void tela_excluir_fornecedor(void);
+void tela_recuperar_fornecedor(void);
 
 void tela_sobre(void);
 void tela_equipe(void);
@@ -58,7 +59,7 @@ int main(void) {
                         break;
             case '2':   modulo_produtos();
                         break;
-            //case '3':   modulo_fornecedor();
+            case '3':   modulo_fornecedor();
                         break;
             case '4':   tela_sobre();
                         tela_equipe();
@@ -541,6 +542,26 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 //Início Módulo 3
+
+void modulo_fornecedor(void) {
+    char opcao;
+    do {
+        opcao = tela_menu_fornecedor();
+        switch(opcao) {
+            case '1': 	tela_cadastro_fornecedor();
+                        break;
+            case '2': 	tela_pesquisar_fornecedor();
+                        break;
+            case '3': 	tela_editar_fornecedor();
+                        break;
+            case '4': 	tela_excluir_fornecedor();
+                        break;
+            case '5': 	tela_recuperar_fornecedor();
+                        break;                        
+        } 		
+    } while (opcao != '0');
+}
+
 char tela_menu_fornecedor(void) {
     char op;
 
@@ -565,6 +586,7 @@ char tela_menu_fornecedor(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 void tela_cadastro_fornecedor(void) {
