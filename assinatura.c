@@ -437,6 +437,7 @@ char tela_menu_produtos(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 void tela_cadastro_produto(void) {
