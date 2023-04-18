@@ -17,7 +17,7 @@ void tela_bem_vindo(void);
 
 char tela_menu_geral(void);
 
-void modulo_assinatura(void);
+void modulo_cadastro(void);
 char tela_menu_assinatura(void);
 void tela_tipos_assinatura(void);
 void tela_cadastro(void);
@@ -55,7 +55,7 @@ int main(void) {
     do {
         opcao = tela_menu_geral();
         switch(opcao) {
-            case '1':   modulo_assinatura();
+            case '1':   modulo_cadastro();
                         break;
             case '2':   modulo_produtos();
                         break;
