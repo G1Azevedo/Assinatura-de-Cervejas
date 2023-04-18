@@ -18,20 +18,20 @@ void tela_bem_vindo(void);
 char tela_menu_geral(void);
 
 void modulo_cadastro(void);
-char tela_menu_assinatura(void);
-void tela_tipos_assinatura(void);
+char tela_menu_cadastro(void);
+void tela_tipos_cadastro(void);
 void tela_cadastro(void);
-void tela_status_assinatura(void);
+void tela_status_cadastro(void);
 void tela_edicao_cadastro(void);
-void tela_excluir_assinatura(void);
-void tela_recuperar_assinatura(void);
+void tela_excluir_cadastro(void);
+void tela_recuperar_cadastro(void);
 
-void modulo_produtos();
-char tela_menu_produtos(void);
-void tela_cadastro_produto(void);
-void tela_pesquisar_produto(void);
-void tela_excluir_produto(void);
-void tela_recuperar_produto(void);
+void modulo_pacote();
+char tela_menu_pacote(void);
+void tela_cadastro_pacote(void);
+void tela_pesquisar_pacote(void);
+void tela_excluir_pacote(void);
+void tela_recuperar_pacote(void);
 
 void modulo_fornecedor(void);
 char tela_menu_fornecedor(void);
@@ -57,7 +57,7 @@ int main(void) {
         switch(opcao) {
             case '1':   modulo_cadastro();
                         break;
-            case '2':   modulo_produtos();
+            case '2':   modulo_pacote();
                         break;
             case '3':   modulo_fornecedor();
                         break;
@@ -120,7 +120,7 @@ char tela_menu_geral(void) {
     printf("///                = = Sistema de Assinatura de Cervejas = =                ///\n");
     printf("///                                                                         ///\n");
     printf("///            1. Módulo Cliente                                            ///\n");
-    printf("///            2. Módulo Produto                                            ///\n");
+    printf("///            2. Módulo Pacotes                                            ///\n");
     printf("///            3. Módulo Fornecedor                                         ///\n");
     printf("///            4. Sobre                                                     ///\n");
     printf("///            0. Encerrar                                                  ///\n");
@@ -138,27 +138,27 @@ char tela_menu_geral(void) {
 
 //Telas do módulo 1
 
-void modulo_assinatura(void) {
+void modulo_cadastro(void) {
     char opcao;
     do {
-        opcao = tela_menu_assinatura();
+        opcao = tela_menu_cadastro();
         switch(opcao) {
-            case '1': 	tela_tipos_assinatura();
+            case '1': 	//tela_tipos_cadastro();
                         tela_cadastro();
                         break;
-            case '2': 	tela_status_assinatura();
+            case '2': 	tela_status_cadastro();
                         break;
             case '3': 	tela_edicao_cadastro();
                         break;
-            case '4': 	tela_excluir_assinatura();
+            case '4': 	tela_excluir_cadastro();
                         break;
-            case '5': 	tela_recuperar_assinatura();
+            case '5': 	tela_recuperar_cadastro();
                         break;                        
         } 		
     } while (opcao != '0');
 }
 
-char tela_menu_assinatura(void) {
+char tela_menu_cadastro(void) {
     char op;
 
     system("clear||cls");
@@ -167,10 +167,10 @@ char tela_menu_assinatura(void) {
     printf("///                       = = Módulo Cliente = =                            ///\n");
     printf("///                                                                         ///\n");
     printf("///            1. Cadastro de cliente                                       ///\n");
-    printf("///            2. Status da assinatura                                      ///\n");
-    printf("///            3. Editar assinatura                                         ///\n");
-    printf("///            4. Excluir assinatura                                        ///\n");
-    printf("///            5. Recuperar assinatura                                      ///\n");
+    printf("///            2. Status da cadastro                                        ///\n");
+    printf("///            3. Editar cadastro                                           ///\n");
+    printf("///            4. Excluir cadastro                                          ///\n");
+    printf("///            5. Recuperar cadastro                                        ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
     printf("///            Escolha a opção desejada: ");
@@ -186,7 +186,7 @@ char tela_menu_assinatura(void) {
 }
 
 
-void tela_tipos_assinatura(void) {
+void tela_tipos_cadastro(void) {
     char op;
 
     system("clear||cls");
@@ -261,7 +261,7 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
-void tela_status_assinatura(void) {
+void tela_status_cadastro(void) {
     char CPF[12];
     char nome[51];
 
@@ -270,7 +270,7 @@ void tela_status_assinatura(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Status da Assinatura = =                        ///\n");
+    printf("///                     = = Status da Cadastro = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            CPF (apenas números): ");
@@ -285,7 +285,7 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                                                                         ///\n");
     printf("///            Cliente:                                                     ///\n");
     printf("///            Status:                                                      ///\n");
-    printf("///            Tipo de assinatura:                                          ///\n");
+    printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
@@ -307,7 +307,7 @@ void tela_edicao_cadastro(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Editar assinatura = =                         ///\n");
+    printf("///                       = = Editar cadastro = =                           ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Confirme seu CPF (apenas números): ");
@@ -339,7 +339,7 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
-void tela_excluir_assinatura(void) {
+void tela_excluir_cadastro(void) {
     char CPF[12];
     char nascimento[11];
     char exclusao[100];
@@ -349,7 +349,7 @@ void tela_excluir_assinatura(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Excluir Assinatura = =                          ///\n");
+    printf("///                     = = Excluir Cadastro = =                            ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Confirme seu CPF (apenas números): ");
@@ -371,7 +371,7 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
-void tela_recuperar_assinatura(void) {
+void tela_recuperar_cadastro(void) {
     char CPF[12];
 
     system("clear||cls");
@@ -379,7 +379,7 @@ void tela_recuperar_assinatura(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Recuperar Assinatura = =                        ///\n");
+    printf("///                     = = Recuperar Cadastro = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Digite o CPF para recuperar (apenas números): ");       
@@ -398,35 +398,35 @@ printf("////////////////////////////////////////////////////////////////////////
 
 //Início do módulo 2
 
-void modulo_produtos(void) {
+void modulo_pacote(void) {
     char opcao;
     do {
-        opcao = tela_menu_produtos();
+        opcao = tela_menu_pacote();
         switch(opcao) {
-            case '1': 	tela_cadastro_produto();
+            case '1': 	tela_cadastro_pacote();
                         break;
-            case '2': 	tela_pesquisar_produto();
+            case '2': 	tela_pesquisar_pacote();
                         break;
-            case '3': 	tela_excluir_produto();
+            case '3': 	tela_excluir_pacote();
                         break;
-            case '4': 	tela_recuperar_produto();
+            case '4': 	tela_recuperar_pacote();
                         break;                        
         } 		
     } while (opcao != '0');
 }
 
-char tela_menu_produtos(void) {
+char tela_menu_pacote(void) {
     char op;
 
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Módulo Produto = =                            ///\n");
+    printf("///                       = = Módulo Pacotes = =                            ///\n");
     printf("///                                                                         ///\n");
-    printf("///            1. Cadastrar produto                                         ///\n");
-    printf("///            2. Pesquisar produto                                         ///\n");
-    printf("///            3. Excluir produto                                           ///\n");
-    printf("///            4. Recuperar produto                                         ///\n");
+    printf("///            1. Cadastrar pacote                                          ///\n");
+    printf("///            2. Pesquisar pacote                                          ///\n");
+    printf("///            3. Excluir pacote                                            ///\n");
+    printf("///            4. Recuperar pacote                                          ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
     printf("///            Escolha a opção desejada: ");
@@ -441,27 +441,23 @@ char tela_menu_produtos(void) {
     return op;
 }
 
-void tela_cadastro_produto(void) {
-    char codigo_produto[4];
-    char nome_produto[51];
-    char nome_fornecedor[51];
+void tela_cadastro_pacote(void) {
+    char codigo_pacote[4];
+    char nome_pacote[51];
 
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Cadastro de produto = =                         ///\n");
+    printf("///                     = = Cadastro de pacote = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Digite o código do produto: ");
-    scanf("%[0-9]", codigo_produto);
+    printf("///            Digite o ID do pacote: ");
+    scanf("%[0-9]", codigo_pacote);
     getchar();
-    printf("///            Digite o nome do produto: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome_produto);
-    getchar();
-    printf("///            Digite o nome do fornecedor: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome_fornecedor);
+    printf("///            Digite o nome do pacote: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome_pacote);
     getchar();
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -471,25 +467,25 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
-void tela_pesquisar_produto(void) {
-    char codigo_produto[4];
+void tela_pesquisar_pacote(void) {
+    char codigo_pacote[4];
 
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Pesquisar produto = =                           ///\n");
+    printf("///                     = = Pesquisar pacote = =                            ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///       Digite o código do produto: ");
-    scanf("%[0-9]", codigo_produto);
+    printf("///       Digite o ID do pacote: ");
+    scanf("%[0-9]", codigo_pacote);
     getchar();
     printf("///////////////////////////////////////////////////////////////////////////////\n");
 }
 
-void tela_excluir_produto(void) {
-    char codigo_produto[4];
+void tela_excluir_pacote(void) {
+    char codigo_pacote[4];
     char exclusao[100];
 
     system("clear||cls");
@@ -497,11 +493,11 @@ void tela_excluir_produto(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Excluir Produto = =                             ///\n");
+    printf("///                     = = Excluir Pacote = =                              ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Digite o código do produto: ");
-    scanf("%[0-9]", codigo_produto);
+    printf("///            Digite o código do pacote: ");
+    scanf("%[0-9]", codigo_pacote);
     getchar();
     printf("///            Motivo da exclusão: ");
     scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",exclusao);
@@ -517,19 +513,19 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 
-void tela_recuperar_produto(void) {
-    char codigo_produto[4];
+void tela_recuperar_pacote(void) {
+    char codigo_pacote[4];
 
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Recuperar Produto = =                           ///\n");
+    printf("///                     = = Recuperar Pacote = =                            ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Digite o código para recuperar o produto: ");       
-    scanf("%[0-9]", codigo_produto);
+    printf("///            Digite o código para recuperar o pacote: ");       
+    scanf("%[0-9]", codigo_pacote);
     getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
