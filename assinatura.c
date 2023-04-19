@@ -19,7 +19,6 @@ char tela_menu_geral(void);
 
 void modulo_cadastro(void);
 char tela_menu_cadastro(void);
-void tela_tipos_cadastro(void);
 void tela_cadastro(void);
 void tela_status_cadastro(void);
 void tela_edicao_cadastro(void);
@@ -36,8 +35,10 @@ void tela_recuperar_pacote(void);
 void modulo_assinatura(void);
 char tela_menu_assinatura(void);
 void tela_cadastro_assinatura(void);
+void tela_tipos_assinatura(void);
 void tela_pesquisar_assinatura(void);
 void tela_editar_assinatura(void);
+void tela_altera_assinatura(void);
 void tela_excluir_assinatura(void);
 void tela_recuperar_assinatura(void);
 
@@ -121,7 +122,7 @@ char tela_menu_geral(void) {
     printf("///                                                                         ///\n");
     printf("///            1. Módulo Cliente                                            ///\n");
     printf("///            2. Módulo Pacotes                                            ///\n");
-    printf("///            3. Módulo assinatura                                         ///\n");
+    printf("///            3. Módulo Assinatura                                         ///\n");
     printf("///            4. Sobre                                                     ///\n");
     printf("///            0. Encerrar                                                  ///\n");
     printf("///                                                                         ///\n");
@@ -143,8 +144,7 @@ void modulo_cadastro(void) {
     do {
         opcao = tela_menu_cadastro();
         switch(opcao) {
-            case '1': 	//tela_tipos_cadastro();
-                        tela_cadastro();
+            case '1':   tela_cadastro();
                         break;
             case '2': 	tela_status_cadastro();
                         break;
@@ -183,31 +183,6 @@ char tela_menu_cadastro(void) {
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
     return op;
-}
-
-
-void tela_tipos_cadastro(void) {
-    char op;
-
-    system("clear||cls");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///          1. Malte Box (4 cervejas puro malte + 1 copo colecionável)     ///\n");                  
-    printf("///          2. Pilsen Box (4 cervejas pilsen + 1 copo colecionável)        ///\n");
-    printf("///          3. Speacility Box (4 cervejas especiais + 1 copo colecionável) ///\n");
-    printf("///          4. National Box (6 cervejas especiais + 1 copo colecionável)   ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Escolha a assinatura desejada: ");
-    scanf("%c", &op);
-    getchar();
-    printf("///                                                                         ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
 }
 
 void tela_cadastro(void) {
@@ -276,6 +251,7 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///            CPF (apenas números): ");
     scanf("%[0-9]", CPF);
     getchar();
+    printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
@@ -545,10 +521,12 @@ void modulo_assinatura(void) {
         opcao = tela_menu_assinatura();
         switch(opcao) {
             case '1': 	tela_cadastro_assinatura();
+                        tela_tipos_assinatura();
                         break;
             case '2': 	tela_pesquisar_assinatura();
                         break;
             case '3': 	tela_editar_assinatura();
+                        tela_altera_assinatura();
                         break;
             case '4': 	tela_excluir_assinatura();
                         break;
@@ -564,7 +542,7 @@ char tela_menu_assinatura(void) {
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Módulo assinatura = =                         ///\n");
+    printf("///                       = = Módulo Assinatura = =                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            1. Cadastro de assinatura                                    ///\n");
     printf("///            2. Pesquisar assinatura                                      ///\n");
@@ -586,43 +564,18 @@ char tela_menu_assinatura(void) {
 }
 
 void tela_cadastro_assinatura(void) {
-    char CNPJ[15];
-    char nome_assinatura[51];
-    char email_assinatura[51];
-    char telefone_assinatura[12];
-    char cidade_assinatura[51];
-    char endereco_assinatura[80];
-    char complemento_assinatura[50];
-
+    char CPF[15];
 
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Cadastro de assinatura = =                      ///\n");
+    printf("///                     = = Cadastro de Assinatura = =                      ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            CNPJ (apenas números): ");
-    scanf("%[0-9]", CNPJ);
-    getchar();
-    printf("///            Nome do assinatura: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome_assinatura);
-    getchar();
-    printf("///            E-mail do assinatura: ");
-    scanf("%[A-Za-z0-9@._]", email_assinatura);
-    getchar();
-    printf("///            Telefone  (apenas números): ");
-    scanf("%[0-9]", telefone_assinatura);
-    getchar();
-    printf("///            Cidade: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade_assinatura);
-    getchar();
-    printf("///            Endereço (bairro, rua e nº): ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco_assinatura);
-    getchar();
-    printf("///            Complemento (opcional):");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento_assinatura);
+    printf("///            CPF (apenas números): ");
+    scanf("%[0-9]", CPF);
     getchar();
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -630,6 +583,30 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 
+}
+
+void tela_tipos_assinatura(void) {
+    char op;
+
+    system("clear||cls");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///          1. Malte Box (4 cervejas puro malte + 1 copo colecionável)     ///\n");                  
+    printf("///          2. Pilsen Box (4 cervejas pilsen + 1 copo colecionável)        ///\n");
+    printf("///          3. Speacility Box (4 cervejas especiais + 1 copo colecionável) ///\n");
+    printf("///          4. National Box (6 cervejas especiais + 1 copo colecionável)   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Escolha a assinatura desejada: ");
+    scanf("%c", &op);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
 }
 
 void tela_pesquisar_assinatura(void) {
@@ -640,7 +617,7 @@ void tela_pesquisar_assinatura(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Pesquisar assinatura = =                        ///\n");
+    printf("///                     = = Pesquisar Assinatura = =                        ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///       Digite o CNPJ do assinatura: ");
@@ -650,43 +627,18 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 void tela_editar_assinatura(void) {
-    char CNPJ[15];
-    char email_assinatura[51];
-    char telefone_assinatura[12];
-    char cidade_assinatura[51];
-    char endereco_assinatura[80];
-    char complemento_assinatura[50];
+    char CPF[8];
 
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Editar assinatura = =                         ///\n");
+    printf("///                       = = Editar Assinatura = =                         ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Confirme o CNPJ (apenas números): ");
-    scanf("%[0-9]", CNPJ);
-    getchar();
-    printf("///                                                                         ///\n");
-    printf("///                       = = OPÇÕES DE EDIÇÃO = =                          ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            E-mail: ");
-    scanf("%[A-Za-z0-9@._]", email_assinatura);
-    getchar();
-    printf("///            Telefone (apenas números): ");
-    scanf("%[0-9]", telefone_assinatura);
-    getchar();
-    printf("///            Cidade: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade_assinatura);
-    getchar();
-    printf("///            Endereço (bairro, rua e nº): ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco_assinatura);
-    getchar();
-    printf("///            Complemento (opcional):");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento_assinatura);
-    getchar();
-    printf("///                                                                         ///\n");
+    printf("///            Confirme o CPF (apenas números): ");
+    scanf("%[0-9]", CPF);
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
@@ -694,8 +646,32 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
+void tela_altera_assinatura(void) {
+    char op;
+
+    system("clear||cls");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///          1. Malte Box (4 cervejas puro malte + 1 copo colecionável)     ///\n");                  
+    printf("///          2. Pilsen Box (4 cervejas pilsen + 1 copo colecionável)        ///\n");
+    printf("///          3. Speacility Box (4 cervejas especiais + 1 copo colecionável) ///\n");
+    printf("///          4. National Box (6 cervejas especiais + 1 copo colecionável)   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Escolha a sua nova assinatura: ");
+    scanf("%c", &op);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
 void tela_excluir_assinatura(void) {
-    char CNPJ[15];
+    char CPF[15];
     char exclusao[100];
 
     system("clear||cls");
@@ -703,11 +679,11 @@ void tela_excluir_assinatura(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Excluir assinatura = =                          ///\n");
+    printf("///                     = = Excluir Assinatura = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Confirme o CNPJ (apenas números): ");
-    scanf("%[0-9]", CNPJ);
+    printf("///            Confirme o CPF (apenas números): ");
+    scanf("%[0-9]", CPF);
     getchar();
     printf("///            Motivo da exclusão: ");
     scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",exclusao);
@@ -723,18 +699,18 @@ printf("////////////////////////////////////////////////////////////////////////
 }
 
 void tela_recuperar_assinatura(void) {
-    char CNPJ[15];
+    char CPF[15];
 
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Recuperar assinatura = =                        ///\n");
+    printf("///                     = = Recuperar Assinatura = =                        ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Digite o CNPJ para recuperar (apenas números): ");       
-    scanf("%[0-9]", CNPJ);
+    printf("///            Digite o CPF para recuperar (apenas números): ");       
+    scanf("%[0-9]", CPF);
     getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
