@@ -33,13 +33,13 @@ void tela_pesquisar_pacote(void);
 void tela_excluir_pacote(void);
 void tela_recuperar_pacote(void);
 
-void modulo_fornecedor(void);
-char tela_menu_fornecedor(void);
-void tela_cadastro_fornecedor(void);
-void tela_pesquisar_fornecedor(void);
-void tela_editar_fornecedor(void);
-void tela_excluir_fornecedor(void);
-void tela_recuperar_fornecedor(void);
+void modulo_assinatura(void);
+char tela_menu_assinatura(void);
+void tela_cadastro_assinatura(void);
+void tela_pesquisar_assinatura(void);
+void tela_editar_assinatura(void);
+void tela_excluir_assinatura(void);
+void tela_recuperar_assinatura(void);
 
 void tela_sobre(void);
 void tela_equipe(void);
@@ -59,7 +59,7 @@ int main(void) {
                         break;
             case '2':   modulo_pacote();
                         break;
-            case '3':   modulo_fornecedor();
+            case '3':   modulo_assinatura();
                         break;
             case '4':   tela_sobre();
                         tela_equipe();
@@ -121,7 +121,7 @@ char tela_menu_geral(void) {
     printf("///                                                                         ///\n");
     printf("///            1. Módulo Cliente                                            ///\n");
     printf("///            2. Módulo Pacotes                                            ///\n");
-    printf("///            3. Módulo Fornecedor                                         ///\n");
+    printf("///            3. Módulo assinatura                                         ///\n");
     printf("///            4. Sobre                                                     ///\n");
     printf("///            0. Encerrar                                                  ///\n");
     printf("///                                                                         ///\n");
@@ -539,38 +539,38 @@ printf("////////////////////////////////////////////////////////////////////////
 
 //Início Módulo 3
 
-void modulo_fornecedor(void) {
+void modulo_assinatura(void) {
     char opcao;
     do {
-        opcao = tela_menu_fornecedor();
+        opcao = tela_menu_assinatura();
         switch(opcao) {
-            case '1': 	tela_cadastro_fornecedor();
+            case '1': 	tela_cadastro_assinatura();
                         break;
-            case '2': 	tela_pesquisar_fornecedor();
+            case '2': 	tela_pesquisar_assinatura();
                         break;
-            case '3': 	tela_editar_fornecedor();
+            case '3': 	tela_editar_assinatura();
                         break;
-            case '4': 	tela_excluir_fornecedor();
+            case '4': 	tela_excluir_assinatura();
                         break;
-            case '5': 	tela_recuperar_fornecedor();
+            case '5': 	tela_recuperar_assinatura();
                         break;                        
         } 		
     } while (opcao != '0');
 }
 
-char tela_menu_fornecedor(void) {
+char tela_menu_assinatura(void) {
     char op;
 
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Módulo Fornecedor = =                         ///\n");
+    printf("///                       = = Módulo assinatura = =                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            1. Cadastro de fornecedor                                    ///\n");
-    printf("///            2. Pesquisar fornecedor                                      ///\n");
-    printf("///            3. Editar fornecedor                                         ///\n");
-    printf("///            4. Excluir fornecedor                                        ///\n");
-    printf("///            5. Recuperar fornecedor                                      ///\n");
+    printf("///            1. Cadastro de assinatura                                    ///\n");
+    printf("///            2. Pesquisar assinatura                                      ///\n");
+    printf("///            3. Editar assinatura                                         ///\n");
+    printf("///            4. Excluir assinatura                                        ///\n");
+    printf("///            5. Recuperar assinatura                                      ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
     printf("///            Escolha a opção desejada: ");
@@ -585,14 +585,14 @@ char tela_menu_fornecedor(void) {
     return op;
 }
 
-void tela_cadastro_fornecedor(void) {
+void tela_cadastro_assinatura(void) {
     char CNPJ[15];
-    char nome_fornecedor[51];
-    char email_fornecedor[51];
-    char telefone_fornecedor[12];
-    char cidade_fornecedor[51];
-    char endereco_fornecedor[80];
-    char complemento_fornecedor[50];
+    char nome_assinatura[51];
+    char email_assinatura[51];
+    char telefone_assinatura[12];
+    char cidade_assinatura[51];
+    char endereco_assinatura[80];
+    char complemento_assinatura[50];
 
 
     system("clear||cls");
@@ -600,29 +600,29 @@ void tela_cadastro_fornecedor(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Cadastro de fornecedor = =                      ///\n");
+    printf("///                     = = Cadastro de assinatura = =                      ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            CNPJ (apenas números): ");
     scanf("%[0-9]", CNPJ);
     getchar();
-    printf("///            Nome do fornecedor: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome_fornecedor);
+    printf("///            Nome do assinatura: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome_assinatura);
     getchar();
-    printf("///            E-mail do fornecedor: ");
-    scanf("%[A-Za-z0-9@._]", email_fornecedor);
+    printf("///            E-mail do assinatura: ");
+    scanf("%[A-Za-z0-9@._]", email_assinatura);
     getchar();
     printf("///            Telefone  (apenas números): ");
-    scanf("%[0-9]", telefone_fornecedor);
+    scanf("%[0-9]", telefone_assinatura);
     getchar();
     printf("///            Cidade: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade_fornecedor);
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade_assinatura);
     getchar();
     printf("///            Endereço (bairro, rua e nº): ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco_fornecedor);
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco_assinatura);
     getchar();
     printf("///            Complemento (opcional):");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento_fornecedor);
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento_assinatura);
     getchar();
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -632,7 +632,7 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
-void tela_pesquisar_fornecedor(void) {
+void tela_pesquisar_assinatura(void) {
     char CNPJ[15];
 
     system("clear||cls");
@@ -640,29 +640,29 @@ void tela_pesquisar_fornecedor(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Pesquisar fornecedor = =                        ///\n");
+    printf("///                     = = Pesquisar assinatura = =                        ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///       Digite o CNPJ do fornecedor: ");
+    printf("///       Digite o CNPJ do assinatura: ");
     scanf("%[0-9]", CNPJ);
     getchar();
     printf("///////////////////////////////////////////////////////////////////////////////\n");
 }
 
-void tela_editar_fornecedor(void) {
+void tela_editar_assinatura(void) {
     char CNPJ[15];
-    char email_fornecedor[51];
-    char telefone_fornecedor[12];
-    char cidade_fornecedor[51];
-    char endereco_fornecedor[80];
-    char complemento_fornecedor[50];
+    char email_assinatura[51];
+    char telefone_assinatura[12];
+    char cidade_assinatura[51];
+    char endereco_assinatura[80];
+    char complemento_assinatura[50];
 
     system("clear||cls");
     printf("\n");
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Editar fornecedor = =                         ///\n");
+    printf("///                       = = Editar assinatura = =                         ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Confirme o CNPJ (apenas números): ");
@@ -672,19 +672,19 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                       = = OPÇÕES DE EDIÇÃO = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///            E-mail: ");
-    scanf("%[A-Za-z0-9@._]", email_fornecedor);
+    scanf("%[A-Za-z0-9@._]", email_assinatura);
     getchar();
     printf("///            Telefone (apenas números): ");
-    scanf("%[0-9]", telefone_fornecedor);
+    scanf("%[0-9]", telefone_assinatura);
     getchar();
     printf("///            Cidade: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade_fornecedor);
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cidade_assinatura);
     getchar();
     printf("///            Endereço (bairro, rua e nº): ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco_fornecedor);
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ,.0-9]",endereco_assinatura);
     getchar();
     printf("///            Complemento (opcional):");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento_fornecedor);
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]",complemento_assinatura);
     getchar();
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -694,7 +694,7 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
-void tela_excluir_fornecedor(void) {
+void tela_excluir_assinatura(void) {
     char CNPJ[15];
     char exclusao[100];
 
@@ -703,7 +703,7 @@ void tela_excluir_fornecedor(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Excluir Fornecedor = =                          ///\n");
+    printf("///                     = = Excluir assinatura = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Confirme o CNPJ (apenas números): ");
@@ -722,7 +722,7 @@ printf("////////////////////////////////////////////////////////////////////////
 
 }
 
-void tela_recuperar_fornecedor(void) {
+void tela_recuperar_assinatura(void) {
     char CNPJ[15];
 
     system("clear||cls");
@@ -730,7 +730,7 @@ void tela_recuperar_fornecedor(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     = = Recuperar Fornecedor = =                        ///\n");
+    printf("///                     = = Recuperar assinatura = =                        ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///            Digite o CNPJ para recuperar (apenas números): ");       
