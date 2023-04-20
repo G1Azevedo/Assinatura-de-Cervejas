@@ -29,6 +29,7 @@ void modulo_pacote();
 char tela_menu_pacote(void);
 void tela_cadastro_pacote(void);
 void tela_pesquisar_pacote(void);
+void tela_edicao_pacote(void);
 void tela_excluir_pacote(void);
 void tela_recuperar_pacote(void);
 
@@ -383,9 +384,11 @@ void modulo_pacote(void) {
                         break;
             case '2': 	tela_pesquisar_pacote();
                         break;
-            case '3': 	tela_excluir_pacote();
+            case '3': 	tela_edicao_pacote();
                         break;
-            case '4': 	tela_recuperar_pacote();
+            case '4': 	tela_excluir_pacote();
+                        break;
+            case '5': 	tela_recuperar_pacote();
                         break;                        
         } 		
     } while (opcao != '0');
@@ -401,8 +404,9 @@ char tela_menu_pacote(void) {
     printf("///                                                                         ///\n");
     printf("///            1. Cadastrar pacote                                          ///\n");
     printf("///            2. Pesquisar pacote                                          ///\n");
-    printf("///            3. Excluir pacote                                            ///\n");
-    printf("///            4. Recuperar pacote                                          ///\n");
+    printf("///            3. Editar pacote                                             ///\n");
+    printf("///            4. Excluir pacote                                            ///\n");
+    printf("///            5. Recuperar pacote                                          ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
     printf("///            Escolha a opção desejada: ");
@@ -429,7 +433,7 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                     = = Cadastro de pacote = =                          ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Digite o ID do pacote: ");
+    printf("///            Digite o código do pacote: ");
     scanf("%[0-9]", codigo_pacote);
     getchar();
     printf("///            Digite o nome do pacote: ");
@@ -454,10 +458,32 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                     = = Pesquisar pacote = =                            ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///       Digite o ID do pacote: ");
+    printf("///       Digite o código do pacote: ");
     scanf("%[0-9]", codigo_pacote);
     getchar();
     printf("///////////////////////////////////////////////////////////////////////////////\n");
+}
+
+void tela_edicao_pacote(void) {
+    char codigo_pacote[12];
+
+    system("clear||cls");
+    printf("\n");
+printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                       = = Editar pacote = =                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Digite o código do pacote: ");
+    scanf("%[0-9]", codigo_pacote);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
 }
 
 void tela_excluir_pacote(void) {
@@ -610,7 +636,7 @@ void tela_tipos_assinatura(void) {
 }
 
 void tela_pesquisar_assinatura(void) {
-    char CNPJ[15];
+    char CPF[15];
 
     system("clear||cls");
     printf("\n");
@@ -620,8 +646,8 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("///                     = = Pesquisar Assinatura = =                        ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///       Digite o CNPJ do assinatura: ");
-    scanf("%[0-9]", CNPJ);
+    printf("///       Digite o CPF do assinatura: ");
+    scanf("%[0-9]", CPF);
     getchar();
     printf("///////////////////////////////////////////////////////////////////////////////\n");
 }
