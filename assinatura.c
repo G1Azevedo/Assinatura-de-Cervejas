@@ -14,7 +14,7 @@
 #include "pacotes.h"
 #include "assinaturas.h"
 
-//Assinatura de funções
+///Assinatura de funções
 
 char tela_menu_geral(void);
 void tela_sobre(void);
