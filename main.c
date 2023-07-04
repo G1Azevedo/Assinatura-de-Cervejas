@@ -15,7 +15,7 @@
 #include "assinaturas.h"
 #include "sobre.h"
 
-//Assinatura de funções
+//Assinatura de função
 
 char tela_menu_geral(void);
 
