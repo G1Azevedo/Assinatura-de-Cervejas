@@ -10,6 +10,7 @@ void modulo_assinatura(void) {
     do {
         opcao = tela_menu_assinatura();
         switch(opcao) {
+void tela_equipe(void);
             case '1': 	tela_cadastro_assinatura();
                         tela_tipos_assinatura();
                         break;

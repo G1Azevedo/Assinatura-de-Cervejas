@@ -1,8 +1,9 @@
 //Sobre & equipe
 
+#include <stdio.h>
+#include "sobre.h"
+
 void tela_sobre(void) {
-    system("clear||cls");
-    printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
@@ -30,7 +31,6 @@ void tela_sobre(void) {
 
 void tela_equipe(void) {
 
-    system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
@@ -42,18 +42,7 @@ void tela_equipe(void) {
     printf("///             Developed by @G1Azevedo -- since Mar, 2023                  ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///            = = = = = Sistema de Gestão Escolar = = = = =                ///\n");
-    printf("///                                   modulo_cliente                                      ///\n");
-    printf("///            Este projeto exemplo foi desenvolvido por:                   ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Gabriel Azevedo de Araujo                                    ///\n");
-    printf("///            E-mail: gabriel.araujo2706@gmail.com                         ///\n");
-    printf("///            Redes sociais: @gabriel_azvd0                                ///\n");
-    printf("///            Git: https://github.com/G1Azevedo/Assinatura-de-Cervejas     ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...");
     getchar();
 } 
