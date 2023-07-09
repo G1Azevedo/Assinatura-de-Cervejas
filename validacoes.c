@@ -190,7 +190,7 @@ int valida_cpf(char* cpf) {
     int d1 = 0;
     int d2 = 0;
     limpa_texto(cpf);
-    if (!cont_n_char(cpf, 11)) {
+    if (!cont_n_char(cpf, ' ', 11)) {
         return 0;
     }
     // calculo digito 1 

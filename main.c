@@ -14,6 +14,7 @@
 #include "pacotes.h"
 #include "assinaturas.h"
 #include "sobre.h"
+#include "validacoes.h"
 
 //Assinatura de função
 
