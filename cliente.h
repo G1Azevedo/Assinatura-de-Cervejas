@@ -35,7 +35,6 @@ void refazer_cadastro(Cliente*);
 // as funções que editam apenas um campo específico da estrutura funcionário
 void tela_editar_cadastro(Cliente*);
 void tela_editar_nome(Cliente*);
-void tela_editar_cpf(Cliente*);
 void tela_editar_cel(Cliente*);
 void tela_editar_email(Cliente*);
 void tela_editar_endereco(Cliente*);

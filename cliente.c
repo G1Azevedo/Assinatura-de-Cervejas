@@ -239,10 +239,9 @@ void tela_editar_cadastro(Cliente *clt) {
         printf(" //                        [Escolha a edicao]                       //\n");
         printf(" //                                                                 //\n");
         printf(" //         [ 1 ] Nome                                              //\n");
-        printf(" //         [ 2 ] CPF                                               //\n");
-        printf(" //         [ 3 ] Email                                             //\n");
-        printf(" //         [ 4 ] Celular                                           //\n");
-        printf(" //         [ 5 ] Cargo                                             //\n");
+        printf(" //         [ 2 ] Email                                             //\n");
+        printf(" //         [ 3 ] Celular                                           //\n");
+        printf(" //         [ 4 ] Endereco                                          //\n");
         printf(" //                                                                 //\n");
         printf(" //         [ 0 ] Sair                                              //\n");
         printf(" //                                                                 //\n");
@@ -255,13 +254,11 @@ void tela_editar_cadastro(Cliente *clt) {
         switch (editar) {
             case '1': tela_editar_nome(clt);
                       break;
-            case '2': tela_editar_cpf(clt);
+            case '2': tela_editar_email(clt);
                       break;
-            case '3': tela_editar_email(clt);
+            case '3': tela_editar_cel(clt);
                       break;
-            case '4': tela_editar_cel(clt);
-                      break;
-            case '5': tela_editar_endereco(clt);
+            case '4': tela_editar_endereco(clt);
                       break;
         }
     } while (editar != '0');
@@ -486,10 +483,10 @@ void refazer_cadastro(Cliente* clt) {
 	while (fread(clt_lido, sizeof(Cliente), 1, fp) && !achou) {
 		if (strcmp(clt_lido->cpf, clt->cpf) == 0) {
 			achou = 1;
-			fseek(fp, -1LL*sizeof(Cliente), SEEK_CUR);
+			fseek(fp,-1*sizeof(Cliente), SEEK_CUR);
         	fwrite(clt, sizeof(Cliente), 1, fp);
 		}
 	}
-	fclose(fp);
 	free(clt_lido);
+    fclose(fp);
 }

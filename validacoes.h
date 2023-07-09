@@ -10,3 +10,6 @@ int is_email_valid(char*); // Verifica se o email é válido
 void limpa_texto(char*); // Remove caracteres que não sejam números nem letras 
 int valida_tel(char*); //valida telefone  
 int valida_cpf(char*); //valida cpf
+void limpa_caracteres(char*);
+int quantidade_digitos(char*, int);
+int numero(char);

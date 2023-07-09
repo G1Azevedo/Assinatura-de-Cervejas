@@ -189,8 +189,8 @@ int valida_cpf(char* cpf) {
     int i, j;
     int d1 = 0;
     int d2 = 0;
-    limpa_texto(cpf);
-    if (!cont_n_char(cpf, ' ', 11)) {
+    limpa_caracteres(cpf);
+    if (!quantidade_digitos(cpf, 11)) {
         return 0;
     }
     // calculo digito 1 
@@ -228,4 +228,39 @@ int valida_cpf(char* cpf) {
         }
     }
     return 1;
+}
+
+int quantidade_digitos(char* v, int x) {
+    int i;
+    for (i = 0; i < x; i++) {
+        if (v[i] == '\0') {
+            return 0;
+        }
+    }
+    if (v[i] != '\0') {
+        return 0;
+    }
+    else {
+        return 1;
+    }
+}
+
+void limpa_caracteres(char* str) {
+    int i, j = 0;
+    for (i = 0; str[i] != '\0'; i++) {
+        if (numero(str[i])) {
+            str[j] = str[i];
+            j++;
+        }
+    }
+    str[j] = '\0';
+}
+
+int numero(char n) {
+    if (n >= '0' && n <= '9') {
+        return 1;
+    }
+    else {
+        return 0;
+    }
 }
