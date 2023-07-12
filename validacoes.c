@@ -264,3 +264,23 @@ int numero(char n) {
         return 0;
     }
 }
+
+int valida_id(char* id, int t) {
+    //       o id em si, o tamanho do id para tornar uma função genérica
+    int i;
+
+    // verifica a quantidade de digitos
+    if (!quantidade_digitos(id, t)) {
+        return 0;
+    }
+
+    // apenas digitos numericos
+    for (i = 0; i < t; i++) {
+        if (!numero(id[i])) {
+            return 0;
+        }
+    }
+
+    // ID valido
+    return 1;
+}

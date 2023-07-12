@@ -13,3 +13,4 @@ int valida_cpf(char*); //valida cpf
 void limpa_caracteres(char*);
 int quantidade_digitos(char*, int);
 int numero(char);
+int valida_id(char*, int);

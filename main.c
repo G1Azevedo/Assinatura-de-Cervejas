@@ -29,7 +29,7 @@ int main(void) {
         switch(opcao) {
             case '1':   modulo_cliente();
                         break;
-            case '2':   modulo_pacote();
+            case '2':   modulo_pacotes();
                         break;
             case '3':   modulo_assinatura();
                         break;
