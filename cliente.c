@@ -5,7 +5,7 @@
 #include "relatorios.h"
 #include "validacoes.h"
 
-// Funções do Módulo Cadastro
+// Funções do Módulo Cadastros
 
 void modulo_cliente(void) {
     char opcao;
