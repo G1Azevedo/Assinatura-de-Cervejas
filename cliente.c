@@ -99,12 +99,12 @@ char tela_menu_cadastro(void) {
     printf("///                                                                         ///\n");
     printf("///                       = = Módulo Cliente = =                            ///\n");
     printf("///                                                                         ///\n");
-    printf("///            1. Cadastro de cliente                                       ///\n");
-    printf("///            2. Status da cadastro                                        ///\n");
-    printf("///            3. Editar cadastro                                           ///\n");
-    printf("///            4. Excluir cadastro                                          ///\n");
-    printf("///            5. Listar cliente                                            ///\n");
-    printf("///            0. Voltar ao menu anterior                                   ///\n");
+    printf("///           <1> Cadastro de cliente                                       ///\n");
+    printf("///           <2> Status da cadastro                                        ///\n");
+    printf("///           <3> Editar cadastro                                           ///\n");
+    printf("///           <4> Excluir cadastro                                          ///\n");
+    printf("///           <5> Listar cliente                                            ///\n");
+    printf("///           <0> Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
     printf("///            Escolha a opção desejada: ");
     scanf("%c", &op);
@@ -197,10 +197,6 @@ printf("////////////////////////////////////////////////////////////////////////
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
     printf("\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
 
     return cpf;
 
@@ -215,11 +211,11 @@ char* tela_atualizar_cadastro(void) {
 printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Editar cadastro = =                           ///\n");
+    printf("///                       [Editar Cadastro]                                 ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     do {
-        printf("         CPF do Funcionario: \n");
+        printf("         Digite seu CPF: \n");
         printf("         => ");
         scanf("%[^\n]", cpf);
         getchar();
@@ -238,12 +234,12 @@ void tela_editar_cadastro(Cliente *clt) {
         printf(" //                                                                 //\n");
         printf(" //                        [Escolha a edicao]                       //\n");
         printf(" //                                                                 //\n");
-        printf(" //         [ 1 ] Nome                                              //\n");
-        printf(" //         [ 2 ] Email                                             //\n");
-        printf(" //         [ 3 ] Celular                                           //\n");
-        printf(" //         [ 4 ] Endereco                                          //\n");
+        printf(" //         <1> Nome                                                //\n");
+        printf(" //         <2> Email                                               //\n");
+        printf(" //         <3> Celular                                             //\n");
+        printf(" //         <4> Endereco                                            //\n");
         printf(" //                                                                 //\n");
-        printf(" //         [ 0 ] Sair                                              //\n");
+        printf(" //         <0> Sair                                                //\n");
         printf(" //                                                                 //\n");
         printf(" /////////////////////////////////////////////////////////////////////\n");
         printf(" //                                                                 //\n");
@@ -317,9 +313,6 @@ void tela_editar_cel(Cliente* clt) {
 
 void tela_editar_email(Cliente* clt) {
     system("cls||clear");
-    printf(" /////////////////////////////////////////////////////////////////////\n");
-    printf(" //                                                                 //\n");
-    printf(" //                                                                 //\n");
     printf(" /////////////////////////////////////////////////////////////////////\n");
     printf(" //                                                                 //\n");
     printf(" //                        [EDICAO]                                 //\n");
