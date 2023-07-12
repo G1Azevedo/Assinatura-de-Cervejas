@@ -92,7 +92,7 @@ void excluir_pacote(void) {
 char tela_pacotes(void) {
     char escolha;
 
-    system("cls//clear");
+    system("cls || clear");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
     printf(" //                                                                 //\n");
     printf(" //                     [PROJETOS]                                  //\n");
@@ -118,7 +118,7 @@ Pacote* tela_adicionar_pacote(void) {
     Pacote *pct;
     pct = (Pacote*) malloc(sizeof(Pacote));
     char* id;
-    system("cls//clear");
+    system("cls || clear");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
     printf(" //                        [PROJETOS]                               //\n");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
@@ -162,7 +162,7 @@ char* tela_pesquisar_pacote(void) {
     char* id;
 
     id = (char*) malloc(6*sizeof(char));
-    system("cls//clear");
+    system("cls || clear");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
     printf(" //                            [PACOTES]                            //\n");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
@@ -187,7 +187,7 @@ char* tela_atualizar_pacote(void) {
     char *id;
 
     id = (char*) malloc(6*sizeof(char));
-    system("cls//clear");
+    system("cls || clear");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
     printf(" //                            [PACOTES]                            //\n");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
@@ -209,7 +209,7 @@ void tela_editar_pacote(Pacote* pct) {
     char editar;
 
     do {
-        system("cls//clear");
+        system("cls || clear");
         printf(" ////////////////////////////////////////////////////////////////////|\n");
         printf(" //                            [PACOTES]                            //\n");
         printf(" ////////////////////////////////////////////////////////////////////|\n");
@@ -241,7 +241,7 @@ void tela_editar_pacote(Pacote* pct) {
 }
 
 void tela_editar_titulo_pacote(Pacote* pct) {
-    system("cls//clear");
+    system("cls || clear");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
     printf(" //                           [PACOTES]                             //\n");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
@@ -266,7 +266,7 @@ void tela_editar_titulo_pacote(Pacote* pct) {
 }
 
 void tela_editar_id_pacote(Pacote* pct) {
-    system("cls//clear");
+    system("cls || clear");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
     printf(" //                           [PACOTES]                             //\n");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
@@ -288,7 +288,7 @@ void tela_editar_id_pacote(Pacote* pct) {
 }
 
 void tela_editar_cerveja(Pacote* pct) {
-    system("cls//clear");
+    system("cls || clear");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
     printf(" //                           [PACOTES]                             //\n");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
@@ -316,7 +316,7 @@ char* tela_excluir_pacote(void) {
     char *id;
 
     id = (char*) malloc(6*sizeof(char));
-    system("cls//clear");
+    system("cls || clear");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
     printf(" //                           [PACOTES]                             //\n");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
@@ -405,7 +405,7 @@ void exibir_pacote(Pacote* pct) {
         printf(" //                                                                 //\n");
         printf(" //      Nome:    %s \n", pct->nome);
         printf(" //      ID:      %s \n", pct->id);
-        printf(" //      Cerveja: %s \n", pct->nome);
+        printf(" //      Cerveja: %s \n", pct->cerveja);
         printf(" //      Status:  %d \n", pct->status);
         printf(" //                                                                 //\n");
         printf(" ////////////////////////////////////////////////////////////////////|\n");
@@ -423,7 +423,7 @@ void refazer_pacote(Pacote *pct) {
     Pacote *pct_lido;
 
     pct_lido = (Pacote*) malloc(sizeof(Pacote));
-    fp = fopen("pacote.dat", "r+b");
+    fp = fopen("pacotes.dat", "r+b");
     if(fp == NULL) {
         tela_erro_pct();
     }
