@@ -284,3 +284,5 @@ int valida_id(char* id, int t) {
     // ID valido
     return 1;
 }
+
+

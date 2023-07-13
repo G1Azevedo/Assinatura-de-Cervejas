@@ -103,7 +103,7 @@ char tela_menu_cadastro(void) {
     system("clear||cls");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///                       = = Módulo Cliente = =                            ///\n");
+    printf("///                       [Módulo Cliente]                                  ///\n");
     printf("///                                                                         ///\n");
     printf("///           <1> Cadastro de cliente                                       ///\n");
     printf("///           <2> Status da cadastro                                        ///\n");

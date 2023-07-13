@@ -6,6 +6,7 @@ struct assinatura {
     char cpf[12];
     char cerveja_asn[50];
     int status;
+    int id_asn;
     Assinatura *prox;
 };
 

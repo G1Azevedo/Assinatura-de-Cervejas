@@ -4,6 +4,8 @@ struct pacote {
     char id[6];
     char cerveja[71];
     int status;
+    int id_pct;
+    Pacote *prox;
 };
 
 // funções gerais para manipular todas as funcionalidades

@@ -19,7 +19,7 @@ void modulo_assinaturas(void) {
                       break;
             case '4': excluir_assinatura();
                       break;
-            //case '5': listar_assinatura();
+            case '5': listar_assinatura();
                       //break;
         }
     } while (opcao != '0');
