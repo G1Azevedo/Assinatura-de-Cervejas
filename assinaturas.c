@@ -20,7 +20,7 @@ void modulo_assinaturas(void) {
             case '4': excluir_assinatura();
                       break;
             case '5': listar_assinatura();
-                      //break;
+                      break;
         }
     } while (opcao != '0');
 }
@@ -413,7 +413,7 @@ char* tela_excluir_assinatura(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///                             [CLIENTE EXCLUIDO]                          ///\n");
+    printf("///                             [ASSINATURA EXCLUIDO]                       ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     getchar();

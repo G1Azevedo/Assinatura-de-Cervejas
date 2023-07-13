@@ -18,6 +18,8 @@ void modulo_pacotes(void) {
                       break;
             case '4': excluir_pacote();
                       break;
+            case '5': listar_pacote();
+                      break;
         }
     } while (opcao != '0');
 }

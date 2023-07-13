@@ -25,7 +25,9 @@ void modulo_cliente(void) {
             case '3': 	atualizar_cadastro();
                         break;
             case '4': 	excluir_cadastro();
-                        break;                    
+                        break;             
+            case '5':   listar_cliente();
+                        break;       
         } 		
     } while (opcao != '0');
 }
