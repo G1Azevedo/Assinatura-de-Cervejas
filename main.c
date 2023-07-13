@@ -15,8 +15,7 @@
 #include "assinaturas.h"
 #include "sobre.h"
 #include "validacoes.h"
-
-//Assinatura de função
+#include "relatorios.h" 
 
 char tela_menu_geral(void);
 
@@ -33,7 +32,9 @@ int main(void) {
                         break;
             case '3':   modulo_assinaturas();
                         break;
-            case '4':   tela_sobre();
+            case '4':   modulo_relatorios();
+                        break;  
+            case '5':   tela_sobre();
                         tela_equipe();
                         break;
         } 	
@@ -49,17 +50,18 @@ char tela_menu_geral(void) {
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                            //\n");
+    printf("//                                🇧​ 🇷 ​🇪​ 🇯​ 🇦 ​🇧​ 🇴​ 🇽​                             ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///                = = Sistema de Assinatura de Cervejas = =                ///\n");
+    printf("///                         [Sistema de Assinatura de Cervejas]             ///\n");
     printf("///                                                                         ///\n");
-    printf("///            1. Módulo Cliente                                            ///\n");
-    printf("///            2. Módulo Pacotes                                            ///\n");
-    printf("///            3. Módulo Assinatura                                         ///\n");
-    printf("///            4. Módulo Relatórios                                         ///\n");
-    printf("///            4. Sobre                                                     ///\n");
-    printf("///            0. Encerrar                                                  ///\n");
+    printf("///           <1> Módulo Cliente                                            ///\n");
+    printf("///           <2> Módulo Pacotes                                            ///\n");
+    printf("///           <3> Módulo Assinatura                                         ///\n");
+    printf("///           <4> Módulo Relatórios                                         ///\n");
+    printf("///           <5> Sobre                                                     ///\n");
+    printf("///                                                                         ///\n");
+    printf("///           <0>. Encerrar                                                 ///\n");
     printf("///                                                                         ///\n");
     printf("///            Escolha a opção desejada: ");
     scanf("%c", &op);
