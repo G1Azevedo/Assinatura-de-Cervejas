@@ -57,6 +57,7 @@ char tela_menu_geral(void) {
     printf("///            1. Módulo Cliente                                            ///\n");
     printf("///            2. Módulo Pacotes                                            ///\n");
     printf("///            3. Módulo Assinatura                                         ///\n");
+    printf("///            4. Módulo Relatórios                                         ///\n");
     printf("///            4. Sobre                                                     ///\n");
     printf("///            0. Encerrar                                                  ///\n");
     printf("///                                                                         ///\n");
