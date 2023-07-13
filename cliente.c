@@ -1,3 +1,9 @@
+
+
+
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -180,7 +186,7 @@ char* tela_pesquisar_cadastro(void) {
 
     system("clear||cls");
     printf("\n");
-printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///                     = = Status da Cadastro = =                          ///\n");
@@ -208,7 +214,7 @@ char* tela_atualizar_cadastro(void) {
     cpf = (char*) malloc(12*sizeof(char));
     system("clear||cls");
     printf("\n");
-printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///                       [Editar Cadastro]                                 ///\n");
@@ -456,9 +462,9 @@ void exibir_cadastro(Cliente* clt) {
         printf("//////////////////////////////////////////////////////////////////////\n");
         printf("///                                                                ///\n");
 	}
-	printf(" ||               ------- Enter para continuar! --------            ||\n");
-    printf(" ||                                                                 ||\n");
-    printf(" |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
+	printf("///                       <Enter para continuar!>                  ///\n");
+    printf("///                                                                ///\n");
+    printf("//////////////////////////////////////////////////////////////////////\n");
 	getchar();
 }
 

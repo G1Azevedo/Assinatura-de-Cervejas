@@ -31,7 +31,7 @@ int main(void) {
                         break;
             case '2':   modulo_pacotes();
                         break;
-            case '3':   modulo_assinatura();
+            case '3':   modulo_assinaturas();
                         break;
             case '4':   tela_sobre();
                         tela_equipe();

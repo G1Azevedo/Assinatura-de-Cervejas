@@ -95,7 +95,7 @@ char tela_pacotes(void) {
     system("cls || clear");
     printf(" ////////////////////////////////////////////////////////////////////|\n");
     printf(" //                                                                 //\n");
-    printf(" //                     [PROJETOS]                                  //\n");
+    printf(" //                     [PACOTES]                                  //\n");
     printf(" //                                                                 //\n");
     printf(" //         <1> Acrescentar novo pacote                             //\n");
     printf(" //         <2> Pesquisar pacote                                    //\n");
